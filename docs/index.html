@@ -1,304 +1,727 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Merve Kırmızıgül | Creative Direction ve AI Advertising Portföyü">
-<title>Merve Kırmızıgül | Creative Portfolio</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Merve Kırmızıgül | Creative Direction & AI Advertising</title>
+<meta name="description" content="Merve Kırmızıgül yaratıcı yönetim, stratejik iletişim ve AI reklamcılık portföyü.">
+
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-:root{--bg:#121718;--card:#263132;--lime:#C3E561;--white:#EFF1E9;--gray:#AAB6B2}
+:root{
+  --bg:#121718;
+  --panel:#263132;
+  --lime:#C3E561;
+  --white:#EFF1E9;
+  --muted:#A9B6B0;
+  --line:#37443F;
+}
+
 *{box-sizing:border-box}
+
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,Arial,sans-serif;line-height:1.65}
-h1,h2,h3{font-family:Sora,Arial,sans-serif;line-height:1.2;letter-spacing:-.035em}
-h1{font-size:clamp(2.7rem,6vw,5.8rem)}
-h2{font-size:clamp(1.9rem,4vw,3.2rem)}
-a{color:inherit;text-decoration:none}
-button{cursor:pointer;font:inherit}
-img,video{display:block;width:100%}
-[hidden]{display:none!important}
-.container{max-width:1200px;margin:auto;padding:0 24px}
-.section{padding:85px 0;scroll-margin-top:85px}
-.lime{color:var(--lime)}
-.muted{color:var(--gray)}
-.small{color:var(--lime);letter-spacing:.14em;font-size:12px;font-weight:700}
-header{position:sticky;top:0;z-index:20;background:#121718f2;border-bottom:1px solid #35413e;backdrop-filter:blur(15px)}
-nav{min-height:75px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{font-family:Sora;font-weight:800;font-size:16px}
-.links{display:flex;gap:21px;flex-wrap:wrap;font-size:12px}
-.links a:hover{color:var(--lime)}
-.hero{min-height:76vh;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:40px;padding-top:70px;padding-bottom:70px}
-.hero p{color:var(--gray);max-width:550px}
-.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.btn{display:inline-block;border:1px solid #64716a;padding:13px 22px;border-radius:6px;font-weight:600;font-size:14px}
-.primary{background:var(--lime);border-color:var(--lime);color:var(--bg)}
-.btn:hover{opacity:.85}
-.hero-art{min-height:380px;border:1px solid #46554c;border-radius:13px;background:linear-gradient(140deg,#35443a,#192122 55%,#121718);display:grid;place-items:center;overflow:hidden}
-.hero-art img,.hero-art video{height:100%;max-height:520px;object-fit:cover}
-.monogram{font:800 clamp(90px,14vw,190px) Sora;color:var(--lime);letter-spacing:-.13em}
-.filters{display:flex;gap:9px;overflow-x:auto;padding:6px 0 22px;scrollbar-width:thin}
-.filters button{white-space:nowrap;background:var(--card);border:1px solid #43504b;color:var(--white);border-radius:40px;padding:11px 17px;font-size:13px}
-.filters button.active,.filters button:hover{background:var(--lime);color:var(--bg)}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 22px}
-.project{display:block;min-width:0}
-.cover{aspect-ratio:16/10;border-radius:9px;overflow:hidden;background:var(--card)}
-.cover img,.cover video{height:100%;object-fit:cover}
-.project h3{margin:9px 0 4px;font-size:19px}
-.project:hover h3{color:var(--lime)}
-.tag{font-size:12px;color:var(--lime);margin-top:10px}
-.services{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.service{background:var(--card);border:1px solid #34433c;border-radius:10px;padding:27px}
-.service h3{margin:10px 0}
-.service p{color:var(--gray);font-size:14px}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
-.about-art{border-radius:12px;min-height:300px;background:var(--card);display:grid;place-items:center;font:800 100px Sora;color:var(--lime)}
-.about p{color:var(--gray)}
-details{border-bottom:1px solid #36433e;padding:20px 0}
-summary{cursor:pointer;font-weight:600;list-style:none;display:flex;align-items:center;gap:16px}
-summary::-webkit-details-marker{display:none}
-summary:after{content:"+";margin-left:auto;color:var(--lime);font-size:22px}
-details[open] summary:after{content:"−"}
-details p{color:var(--gray);font-size:14px;max-width:820px;padding:8px 30px}
-.contact{background:#182021;border:1px solid #35413e;border-radius:14px;padding:42px}
-.contact h2{max-width:800px}
-.contact-row{display:flex;gap:18px;align-items:center;padding:22px 0;border-top:1px solid #35413e}
-.icon{background:var(--card);color:var(--lime);padding:14px;border-radius:9px}
-footer{border-top:1px solid #35413e;padding:25px 0;color:var(--gray);font-size:13px}
-.detail-media{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:35px 0}
-.detail-media video,.detail-media img{border-radius:9px;max-height:650px;object-fit:contain;background:#1d2525}
-.detail-media video{grid-column:1/-1}
-.project-text{white-space:pre-line;max-width:850px;color:var(--gray);line-height:1.9}
-.back{display:inline-block;color:var(--lime);margin-bottom:25px}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--white);
+  font-family:Inter,Arial,sans-serif;
+}
+
+a{text-decoration:none;color:inherit}
+button{font:inherit;cursor:pointer}
+
+h1,h2,h3{
+  font-family:Sora,Arial,sans-serif;
+  letter-spacing:-.045em;
+}
+
+.container{
+  width:min(1200px,calc(100% - 40px));
+  margin:auto;
+}
+
+/* MENÜ */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:#121718f2;
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+}
+
+.nav{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  font-family:Sora,sans-serif;
+  font-weight:800;
+  letter-spacing:-.05em;
+  font-size:17px;
+}
+
+.logo span{color:var(--lime)}
+
+.nav-links{
+  display:flex;
+  gap:24px;
+  font-size:12px;
+  color:#C7D0CA;
+}
+
+.nav-links a:hover{color:var(--lime)}
+
+/* GENEL */
+
+.eyebrow{
+  color:var(--lime);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.11em;
+}
+
+.section{
+  padding:85px 0;
+  border-top:1px solid var(--line);
+}
+
+.section h2{
+  font-size:clamp(34px,4.5vw,58px);
+  margin:15px 0 35px;
+}
+
+.muted{
+  color:var(--muted);
+  line-height:1.8;
+}
+
+/* HERO */
+
+.hero{
+  min-height:625px;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(circle at 85% 33%,#556e382d,transparent 35%),
+    linear-gradient(135deg,#192321,#121718 70%);
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  width:560px;
+  height:560px;
+  right:-130px;
+  top:12%;
+  border:1px solid #C3E56145;
+  border-radius:50%;
+  box-shadow:0 0 0 100px #C3E56108,
+             0 0 0 200px #C3E56105;
+  pointer-events:none;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  padding:100px 0;
+}
+
+.hero h1{
+  font-size:clamp(45px,7vw,90px);
+  line-height:1.1;
+  margin:24px 0;
+  max-width:1000px;
+}
+
+.hero h1 span{color:var(--lime)}
+
+.hero p{
+  max-width:610px;
+  color:#C4CEC7;
+  line-height:1.9;
+  font-size:16px;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:16px 23px;
+  background:var(--lime);
+  color:#121718;
+  font-size:13px;
+  font-weight:700;
+  border:1px solid var(--lime);
+  border-radius:5px;
+  transition:.2s;
+}
+
+.btn:hover{
+  background:transparent;
+  color:var(--lime);
+}
+
+/* KATEGORİ FİLTRELERİ */
+
+.filters{
+  display:flex;
+  gap:10px;
+  overflow-x:auto;
+  padding:5px 0 22px;
+  margin-bottom:16px;
+  scrollbar-width:thin;
+}
+
+.filter{
+  flex:none;
+  border:1px solid #47564F;
+  border-radius:100px;
+  padding:12px 17px;
+  background:var(--panel);
+  color:var(--white);
+  white-space:nowrap;
+  font-size:12px;
+}
+
+.filter.active,
+.filter:hover{
+  background:var(--lime);
+  border-color:var(--lime);
+  color:#121718;
+}
+
+/* PROJE KARTLARI */
+
+.projects{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:42px 28px;
+}
+
+.card{
+  display:block;
+  min-width:0;
+}
+
+.cover{
+  width:100%;
+  aspect-ratio:16/10;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 75% 30%,var(--accent-soft),transparent 38%),
+    linear-gradient(135deg,#2a3835,#121919 75%);
+  border:1px solid #405049;
+}
+
+.cover:before{
+  content:"";
+  position:absolute;
+  border:1px solid var(--accent);
+  width:70%;
+  aspect-ratio:1;
+  right:-25%;
+  top:-35%;
+  border-radius:50%;
+  opacity:.45;
+}
+
+.cover:after{
+  content:"";
+  position:absolute;
+  background:linear-gradient(90deg,transparent,#ffffff10,transparent);
+  width:40%;
+  height:150%;
+  left:35%;
+  top:-25%;
+  transform:rotate(28deg);
+}
+
+.cover img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  position:absolute;
+  inset:0;
+  z-index:2;
+}
+
+.cover-label{
+  position:absolute;
+  top:9%;
+  left:8%;
+  font-size:11px;
+  letter-spacing:.1em;
+  color:var(--accent);
+  z-index:1;
+}
+
+.cover-word{
+  position:absolute;
+  bottom:12%;
+  left:8%;
+  right:8%;
+  font-family:Sora,sans-serif;
+  font-size:clamp(27px,3.2vw,47px);
+  font-weight:800;
+  letter-spacing:-.06em;
+  z-index:1;
+  overflow-wrap:anywhere;
+}
+
+.card:hover .cover{
+  border-color:var(--lime);
+}
+
+.card-category{
+  color:var(--lime);
+  margin-top:19px;
+  font-size:12px;
+}
+
+.card h3{
+  font-size:25px;
+  margin:10px 0;
+}
+
+.card-sub{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.7;
+}
+
+.card-more{
+  display:inline-block;
+  color:var(--lime);
+  margin-top:16px;
+  font-size:13px;
+}
+
+/* ÖNE ÇIKAN TANITIM FİLMİ */
+
+.featured{
+  display:grid;
+  grid-template-columns:1fr 1.08fr;
+  gap:25px;
+  align-items:center;
+  background:#1C2725;
+  border:1px solid #41534A;
+  padding:24px;
+  margin-bottom:45px;
+}
+
+.featured h3{
+  font-size:clamp(27px,3.5vw,43px);
+  margin:15px 0;
+}
+
+.featured p{
+  color:#B9C6BE;
+  line-height:1.85;
+  font-size:14px;
+}
+
+.featured .cover{
+  aspect-ratio:16/9;
+}
+
+/* HİZMETLER */
+
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.service{
+  padding:32px;
+  border:1px solid var(--line);
+  background:#1B2524;
+}
+
+.service-number{
+  color:var(--lime);
+  font-size:12px;
+}
+
+.service h3{
+  font-size:22px;
+  margin:15px 0;
+}
+
+.service p{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.8;
+}
+
+/* HAKKIMDA */
+
+.about-text{
+  max-width:850px;
+  color:#C5D0C8;
+  line-height:2;
+  font-size:16px;
+}
+
+/* SSS */
+
+.faq details{
+  padding:21px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.faq summary{
+  cursor:pointer;
+  font-weight:600;
+  font-size:15px;
+}
+
+.faq details p{
+  color:var(--muted);
+  line-height:1.9;
+  max-width:790px;
+}
+
+/* İLETİŞİM */
+
+.contact h2{
+  max-width:850px;
+  font-size:clamp(42px,6vw,74px);
+}
+
+.contact h2 span{
+  color:var(--lime);
+}
+
+/* PROJE DETAY SAYFASI */
+
+.detail{
+  padding:70px 0 100px;
+}
+
+.back{
+  color:var(--lime);
+  font-size:13px;
+}
+
+.detail h1{
+  font-size:clamp(42px,6vw,75px);
+  margin:25px 0 12px;
+}
+
+.detail-sub{
+  color:var(--muted);
+  font-size:16px;
+}
+
+.detail .cover{
+  margin:38px 0;
+  aspect-ratio:16/8;
+}
+
+.detail-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:38px;
+  padding:32px 0;
+}
+
+.detail-grid h3{
+  color:var(--lime);
+  font-size:16px;
+}
+
+.detail-grid p{
+  color:#C3CFC7;
+  line-height:1.95;
+  font-size:15px;
+}
+
+.media-area{
+  margin-top:30px;
+  background:#1C2725;
+  border:1px solid var(--line);
+  padding:30px;
+}
+
+.media-area video{
+  width:100%;
+  display:block;
+  margin-top:20px;
+}
+
+.repo-link{
+  display:inline-block;
+  color:var(--lime);
+  border:1px solid var(--lime);
+  padding:14px 20px;
+  margin-top:20px;
+  font-size:13px;
+}
+
+footer{
+  border-top:1px solid var(--line);
+  padding:30px 0;
+  color:var(--muted);
+  font-size:12px;
+}
+
 @media(max-width:760px){
-nav{flex-direction:column;align-items:flex-start;padding:16px 0}
-.links{gap:12px}
-.hero,.about,.grid,.services,.detail-media{grid-template-columns:1fr}
-.hero{padding-top:40px;min-height:auto}
-.hero-art{min-height:230px}
-.section{padding:58px 0}
-.contact{padding:25px}
+  .nav{min-height:70px}
+  .logo{font-size:14px}
+  .nav-links{gap:12px;font-size:11px}
+  .hero{min-height:530px}
+  .hero-content{padding:70px 0}
+  .projects,
+  .featured,
+  .service-grid,
+  .detail-grid{
+    grid-template-columns:1fr;
+  }
+  .section{padding:60px 0}
+  .card h3{font-size:22px}
+  .cover-word{font-size:32px}
+  .featured{padding:15px}
+  .service{padding:24px}
+  .detail{padding-top:40px}
+  .media-area{padding:20px}
+}
+
+@media(max-width:420px){
+  .nav-links{gap:9px}
+  .nav-links a{font-size:10px}
+  .hero h1{font-size:42px}
 }
 </style>
 </head>
+
 <body>
+
 <header>
-<nav class="container">
-<a class="logo" href="./">MK<span class="lime">.</span> / MERVE KIRMIZIGÜL</a>
-<div class="links">
-<a href="./#projeler">PROJELER</a>
-<a href="./#hizmetler">HİZMETLER</a>
-<a href="./#hakkimda">HAKKIMDA</a>
-<a href="./#sss">SSS</a>
-<a href="./#iletisim">İLETİŞİM</a>
-</div>
-</nav>
+  <div class="container nav">
+    <a href="./" class="logo">
+      Merve Kırmızıgül <span>↗</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="./#projeler">Projeler</a>
+      <a href="./#hakkimda">Hakkımda</a>
+      <a href="./#iletisim">İletişim</a>
+    </nav>
+  </div>
 </header>
 
-<main id="homepage">
-<section class="container hero">
-<div>
-<div class="small">CREATIVE DIRECTION / AI ADVERTISING</div>
-<h1>Üretimin gücü.<br><span class="lime">Yaratıcılığın etkisi.</span></h1>
-<p>Markaların ihtiyaçlarını stratejik bakış açısıyla ele alıyor; yaratıcı reklam fikirlerini yapay zekâ destekli görsel ve video üretimiyle buluşturuyorum.</p>
-<div class="buttons">
-<a class="btn primary" href="#projeler">Projelerimi İncele ↗</a>
-<a class="btn" href="#iletisim">İletişime Geç</a>
-</div>
-</div>
-<div class="hero-art" id="heroArt"><span class="monogram">MK.</span></div>
-</section>
+<div id="app"></div>
 
-<section class="section container" id="projeler">
-<div class="small">01 / SELECTED WORK</div>
-<h2>Reklam <span class="lime">Çalışmaları.</span></h2>
-<div class="filters" id="filters"></div>
-<div class="grid" id="projectGrid">
-<p class="muted">Reklamlar GitHub'dan yükleniyor...</p>
-</div>
-</section>
-
-<section class="section container" id="hizmetler">
-<div class="small">02 / SERVICES</div>
-<h2>Stratejiden <span class="lime">yaratıcı üretime.</span></h2>
-<div class="services">
-<div class="service"><div class="small">01</div><h3>Creative Direction</h3><p>Reklam fikri, kreatif konsept ve görsel anlatım geliştirme.</p></div>
-<div class="service"><div class="small">02</div><h3>AI Reklam Filmleri</h3><p>Yapay zekâ destekli video reklamlar ve yaratıcı ürün anlatıları.</p></div>
-<div class="service"><div class="small">03</div><h3>Görsel Reklam Kampanyaları</h3><p>Ürün ve marka iletişimine yönelik yaratıcı reklam görselleri.</p></div>
-<div class="service"><div class="small">04</div><h3>Stratejik İletişim</h3><p>Marka ihtiyaçlarını, hedef kitleyi ve iletişim yaklaşımını değerlendirme.</p></div>
-</div>
-</section>
-
-<section class="section container" id="hakkimda">
-<div class="about">
-<div class="about-art">MK.</div>
-<div>
-<div class="small">03 / ABOUT</div>
-<h2>Merve <span class="lime">Kırmızıgül.</span></h2>
-<p>Hacettepe Üniversitesi Uluslararası İlişkiler (İngilizce) mezunuyum. Reklamcılık ve propaganda alanındaki eğitimlerimle geliştirdiğim stratejik bakış açısını, yapay zekâ destekli reklam üretimiyle birleştiriyorum.</p>
-<p>Reklam benim için yalnızca görsel üretmek değil; markanın ihtiyaçlarını anlayıp doğru yaratıcı yaklaşımı geliştirmek.</p>
-</div>
-</div>
-</section>
-
-<section class="section container" id="sss">
-<div class="small">04 / FAQ</div>
-<h2>Sık Sorulan <span class="lime">Sorular.</span></h2>
-<details open><summary><span class="lime">01</span>Hangi sektörler için reklam hazırlıyorsunuz?</summary><p>Sanayi ve imalat başta olmak üzere farklı sektörlerde yaratıcı reklam projelerini değerlendiriyorum. Projenin kapsamını markanın ihtiyacına göre belirliyorum.</p></details>
-<details><summary><span class="lime">02</span>Yapay zekâyı reklam üretiminde nasıl kullanıyorsunuz?</summary><p>Yapay zekâ araçlarını konsept, görsel anlatım ve reklam üretiminde kullanıyorum. Önceliğim markanın mesajına uygun bir yaratıcı yaklaşım geliştirmek.</p></details>
-<details><summary><span class="lime">03</span>Creative Direction neleri kapsıyor?</summary><p>İletişim ihtiyacının değerlendirilmesi, reklam konsepti geliştirilmesi ve görsel anlatımın yönlendirilmesi. Hizmet kapsamı projeye göre netleştirilir.</p></details>
-<details><summary><span class="lime">04</span>Bir reklam projesine nasıl başlıyorsunuz?</summary><p>Önce markanın ürününü, hedef kitlesini ve ihtiyaçlarını değerlendiriyor, ardından kreatif yönü planlıyorum.</p></details>
-<details><summary><span class="lime">05</span>Uluslararası pazarlar için çalışıyor musunuz?</summary><p>Uluslararası pazarlara yönelik iletişim yaklaşımı çalışma ilgi alanlarım arasında. Proje kapsamı görüşmeyle belirlenebilir.</p></details>
-<details><summary><span class="lime">06</span>Nasıl iletişime geçebiliriz?</summary><p>Instagram hesabım üzerinden reklam projeniz veya iş birliği öneriniz hakkında mesaj gönderebilirsiniz.</p></details>
-</section>
-
-<section class="section container" id="iletisim">
-<div class="contact">
-<div class="small">05 / CONTACT</div>
-<h2>Bir fikriniz mi var?<br><span class="lime">Birlikte geliştirelim.</span></h2>
-<p class="muted">Reklam projeleri, yaratıcı iş birlikleri ve profesyonel fırsatlar için iletişime geçebilirsiniz.</p>
-<a class="contact-row" href="https://www.instagram.com/ross.creativestudio/" target="_blank" rel="noopener noreferrer">
-<span class="icon">◎</span><span>Instagram<br><strong>@ross.creativestudio</strong></span><span class="lime">↗</span>
-</a>
-<a class="btn primary" href="https://www.instagram.com/ross.creativestudio/" target="_blank" rel="noopener noreferrer">Projenizi Konuşalım ↗</a>
-</div>
-</section>
-</main>
-
-<section class="container section" id="detail" hidden>
-<a class="back" href="./#projeler">← Tüm Projeler</a>
-<div id="detailBody"></div>
-</section>
-
-<footer><div class="container">© <span id="year"></span> Merve Kırmızıgül · Creative Direction & AI Advertising</div></footer>
+<footer>
+  <div class="container">
+    © 2026 Merve Kırmızıgül
+    · Creative Direction & AI Advertising
+  </div>
+</footer>
 
 <script>
-const USER="mervekirmiziguladvertsprofessions";
-const CATS=["Sanayi & İmalat","Yapı & İnşaat","Gayrimenkul","Lojistik","Otomotiv","Mobilya"];
-const OVERRIDE={
-"CNC":"Sanayi & İmalat",
-"HAREKETİN MÜHENDİSLİĞİ":"Sanayi & İmalat",
-"SAHANIN GÜCÜ":"Sanayi & İmalat",
-"FORMUN ÖTESİNDE:PLASTİK TEKNOLOJİLERİ":"Sanayi & İmalat",
-"SENKRON":"Lojistik",
-"MEKANA DAİR":"Gayrimenkul"
-};
-let projects=[],active="Tüm Projeler";
-const el=id=>document.getElementById(id);
-const escapeHTML=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-async function getJSON(url){
- const response=await fetch(url);
- if(!response.ok)throw Error("GitHub yanıtı: "+response.status);
- return response.json();
-}
-function category(repo){
- if(OVERRIDE[repo.name])return OVERRIDE[repo.name];
- let n=(repo.name+" "+(repo.description||"")).toLocaleLowerCase("tr");
- if(/loj|nakliye|kargo/.test(n))return "Lojistik";
- if(/emlak|konut|gayrimenkul/.test(n))return "Gayrimenkul";
- if(/mobilya|furniture/.test(n))return "Mobilya";
- if(/otomotiv|automotive|araba/.test(n))return "Otomotiv";
- if(/yapı|yapi|inşaat|insaat/.test(n))return "Yapı & İnşaat";
- if(/makine|cnc|robot|plast|sanayi|trakt|imalat/.test(n))return "Sanayi & İmalat";
- return "Diğer Projeler";
-}
-function mediaTag(m,preview=false){
- const url=escapeHTML(m.url);
- if(m.video)return '<video src="'+url+'" controls playsinline preload="metadata"></video>';
- return '<img src="'+url+'" loading="lazy" alt="Proje görseli">';
-}
-async function loadRepo(repo){
- let media=[];
- try{
- const tree=await getJSON(
-  "https://api.github.com/repos/"+USER+"/"+encodeURIComponent(repo.name)+
-  "/git/trees/"+encodeURIComponent(repo.default_branch)+"?recursive=1"
- );
- media=(tree.tree||[]).filter(f=>f.type==="blob"&&/\.(png|jpe?g|webp|gif|mp4|webm)$/i.test(f.path)).map(f=>({
- video:/\.(mp4|webm)$/i.test(f.path),
- url:"https://raw.githubusercontent.com/"+USER+"/"+encodeURIComponent(repo.name)+"/"+
- encodeURIComponent(repo.default_branch)+"/"+f.path.split("/").map(encodeURIComponent).join("/")
- }));
- }catch(e){console.warn(repo.name,e)}
- return {
- name:repo.name,
- title:repo.name.replace(/[-_]/g," "),
- description:repo.description||"",
- category:category(repo),
- media,
- github:repo.html_url,
- branch:repo.default_branch
- };
-}
-function renderFilters(){
- let cats=["Tüm Projeler",...CATS.filter(c=>projects.some(p=>p.category===c))];
- if(projects.some(p=>p.category==="Diğer Projeler"))cats.push("Diğer Projeler");
- el("filters").innerHTML=cats.map(c=>
- '<button type="button" class="'+(active===c?"active":"")+
- '" data-cat="'+escapeHTML(c)+'">'+escapeHTML(c)+'</button>').join("");
- el("filters").querySelectorAll("button").forEach(b=>b.onclick=()=>{
- active=b.dataset.cat;
- renderFilters();renderGrid();
- });
-}
-function renderGrid(){
- const shown=projects.filter(p=>active==="Tüm Projeler"||p.category===active);
- el("projectGrid").innerHTML=shown.map(p=>{
- const cover=p.media.find(m=>!m.video)||p.media[0];
- return '<a class="project" href="?proje='+encodeURIComponent(p.name)+'">'+
- '<div class="cover">'+(cover?mediaTag(cover,true):'<div class="monogram">MK.</div>')+'</div>'+
- '<div class="tag">'+escapeHTML(p.category)+'</div>'+
- '<h3>'+escapeHTML(p.title)+' ↗</h3>'+
- '<div class="muted">'+escapeHTML(p.description)+'</div></a>';
- }).join("")||'<p class="muted">Bu kategoride proje bulunamadı.</p>';
-}
-async function detailPage(p){
- el("homepage").hidden=true;el("detail").hidden=false;
- const media=p.media.map(m=>mediaTag(m)).join("");
- el("detailBody").innerHTML=
- '<div class="small">'+escapeHTML(p.category)+'</div>'+
- '<h1>'+escapeHTML(p.title)+'</h1>'+
- '<p class="muted">'+escapeHTML(p.description)+'</p>'+
- '<div class="detail-media">'+media+'</div>'+
- '<h2>Projenin <span class="lime">Arkasındaki Fikir.</span></h2>'+
- '<div class="project-text" id="projectText">Proje açıklaması eklenecek.</div>'+
- '<p><a class="btn" target="_blank" rel="noopener noreferrer" href="'+
- escapeHTML(p.github)+'">Proje Dosyaları ↗</a></p>';
- try{
- const url="https://raw.githubusercontent.com/"+USER+"/"+encodeURIComponent(p.name)+
- "/"+encodeURIComponent(p.branch)+"/README.md";
- const r=await fetch(url);
- if(r.ok){
- const t=await r.text();
- if(t.trim())el("projectText").textContent=t.replace(/^#+\s*/gm,"");
- }
- }catch(e){}
-}
-async function init(){
- el("year").textContent=new Date().getFullYear();
- try{
- const repos=await getJSON("https://api.github.com/users/"+USER+"/repos?per_page=100");
- projects=await Promise.all(repos.filter(r=>!r.fork&&!r.archived).map(loadRepo));
- projects.sort((a,b)=>a.name.localeCompare(b.name,"tr"));
- const requested=new URLSearchParams(location.search).get("proje");
- if(requested){
- const p=projects.find(x=>x.name===requested);
- if(p)await detailPage(p);
- else el("projectGrid").textContent="Proje bulunamadı.";
- }else{
- renderFilters();renderGrid();
- const best=projects.flatMap(p=>p.media).find(m=>!m.video);
- if(best)el("heroArt").innerHTML=mediaTag(best);
- }
- }catch(err){
- el("projectGrid").innerHTML='<p class="muted">Projeler geçici olarak yüklenemedi. <a class="lime" href="https://github.com/'+USER+'" target="_blank" rel="noopener noreferrer">GitHub çalışmalarını aç ↗</a></p>';
- }
-}
 
-/* MERVE KIRMIZIGÜL — KATEGORİ VE İSİM DÜZENİ */
+/* GITHUB HESABI */
+const OWNER = "mervekirmiziguladvertsprofessions";
 
-/* Onaylanan kategoriler */
-CATS.splice(0, CATS.length,
+/*
+  11 GERÇEK GITHUB DEPOSU
+  API KULLANILMAZ.
+
+  cover: "" alanına daha sonra kapak yolu eklenir.
+  video: "" alanına daha sonra video yolu eklenir.
+
+  Repo isimleri teknik isimlerdir.
+  name alanı ziyaretçiye görünen profesyonel isimdir.
+*/
+
+const PROJECTS = [
+
+  {
+    repo:"CNC",
+    slug:"cnc",
+    name:"Hassasiyetin Gücü",
+    subtitle:"CNC Teknolojileri",
+    category:"Sanayi & İmalat",
+    visual:"Hassasiyet",
+    accent:"#C3E561",
+    soft:"#647D493D",
+    idea:"CNC teknolojilerindeki hassas üretimi, mühendislik disiplinini ve endüstriyel estetiği öne çıkaran bir reklam konsepti.",
+    strategy:"Teknik üretim süreçlerini güçlü bir görsel anlatıya dönüştürerek hassasiyet ve teknoloji algısını merkeze almak.",
+    cover:"",
+    video:""
+  },
+
+  {
+    repo:"Robotik-Otomasyon",
+    slug:"robotik",
+    name:"Hareketin Mühendisliği",
+    subtitle:"Robotik Otomasyon",
+    category:"Sanayi & İmalat",
+    visual:"Otomasyon",
+    accent:"#B2D7C5",
+    soft:"#668F803C",
+    idea:"Robotik sistemlerin hareketini, koordinasyonunu ve teknolojik karakterini yaratıcı bir görsel dilde ele alan reklam konsepti.",
+    strategy:"Robotik otomasyonu yalnızca teknik bir sistem olarak değil, üretimin dönüşümünü temsil eden bir teknoloji olarak konumlandırmak.",
+    cover:"",
+    video:""
+  },
+
+  {
+    repo:"Is-Makineleri",
+    slug:"is-makineleri",
+    name:"Sahanın Gücü",
+    subtitle:"İş Makineleri",
+    category:"Sanayi & İmalat",
+    visual:"Sahanın Gücü",
+    accent:"#D8BB88",
+    soft:"#BA87403D",
+    idea:"İş makinelerinin ölçeğini ve sahadaki endüstriyel karakterini sinematik bir reklam anlatısıyla yorumlayan konsept.",
+    strategy:"Güç, ölçek ve dayanıklılık algısını yüksek etkili bir görsel kimliğe dönüştürmek.",
+    cover:"",
+    video:""
+  },
+
+  {
+    repo:"Plastik-Teknolojileri-Formun-Otesinde",
+    slug:"plastik",
+    name:"Formun Ötesinde",
+    subtitle:"Plastik Teknolojileri",
+    category:"Sanayi & İmalat",
+    visual:"Form",
+    accent:"#AFDDD4",
+    soft:"#6CA6A03C",
+    idea:"Plastik teknolojilerindeki malzeme, form ve dönüşüm kavramlarını çağdaş bir reklam estetiğiyle ele alan yaratıcı konsept.",
+    strategy:"Üretimin teknik boyutunu, malzemenin tasarım potansiyeli ve görsel dönüşümü üzerinden anlatmak.",
+    cover:"",
+    video:""
+  },
+
+  {
+    repo:"Lojistik",
+    slug:"lojistik",
+    name:"Lojistik",
+    subtitle:"Lojistik ve Taşımacılık",
+    category:"Lojistik",
+    visual:"Bağlantı",
+    accent:"#B4CDDE",
+    soft:"#7196B43C",
+    idea:"Lojistik ağlarını, hareketi ve koordinasyonu bir araya getiren sinematik reklam konsepti.",
+    strategy:"Lojistiğin görünmeyen bağlantılarını, zamanlama ve sistem bütünlüğü üzerinden anlamlı bir görsel anlatıya dönüştürmek.",
+    cover:"",
+    video:""
+  },
+
+  {
+    repo:"Gayrimenkul",
+    slug:"gayrimenkul",
+    name:"Gayrimenkul",
+    subtitle:"Mimari ve Yaşam Alanları",
+    category:"Gayrimenkul",
+    visual:"Mekân",
+    accent:"#D7C8AF",
+    soft:"#A78D633D",
+    idea:"Mekânların mimari karakterini ve yaşam deneyimini merkeze alan gayrimenkul reklam konsepti.",
+    strategy:"Fiziksel özelliklerin ötesinde, mekânın oluşturduğu atmosferi ve yaşam hissini görsel iletişim aracılığıyla anlatmak.",
+    cover:"",
+    video:""
+  },
+
+  {
+    repo:"Otomotiv",
+    slug:"otomotiv",
+    name:"Continental",
+    subtitle:"Otomotiv · Bağımsız Reklam Konsepti",
+    category:"Otomotiv",
+    visual:"Performans",
+    accent:"#E4C39A",
+    soft:"#B28F553C",
+    idea:"Continental markası odağında sürüş, performans ve teknoloji temalarını sinematik bir reklam diliyle ele alan bağımsız konsept.",
+    strategy:"Otomotiv ürününün teknik ve duygusal değerlerini güçlü bir görsel kimlikte buluşturmak.",
+    cover:"",
+    video:""
+  },
+
+  {
+    repo:"Kozmetik-Moda",
+    slug:"kozmetik",
+    name:"Maybelline",
+    subtitle:"Moda ve Kozmetik · Bağımsız Reklam Konsepti",
+    category:"Moda & Kozmetik",
+    visual:"Güzellik",
+    accent:"#E9B6D0",
+    soft:"#BB71983C",
+    idea:"Maybelline odağında renk, güzellik estetiği ve ürün sunumunu bir araya getiren bağımsız AI reklam konsepti.",
+    strategy:"Kozmetik reklamcılığındaki görsel çekiciliği ürün kimliğiyle bütünleştirmek ve akılda kalıcı bir görsel atmosfer oluşturmak.",
+    cover:"",
+    video:""
+  },
+
+  {
+    repo:"Spor-Beslenme",
+    slug:"spor-beslenme",
+    name:"OCN Protein",
+    subtitle:"Spor ve Beslenme · AI Reklam Konsepti",
+    category:"Spor & Beslenme",
+    visual:"Performans",
+    accent:"#D8DB9A",
+    soft:"#A9AD623C",
+    idea:"Sporcu beslenmesi kategorisinde ürün estetiğini dinamik bir reklam diliyle birleştiren AI reklam konsepti.",
+    strategy:"Ürünün sportif kimliğini, güçlü kadrajlar ve dinamik görsel anlatım üzerinden öne çıkarmak.",
+    cover:"",
+    video:""
+  },
+
+  {
+    repo:"Turizm-Seyahat",
+    slug:"turizm-seyahat",
+    name:"Turizm ve Seyahat",
+    subtitle:"Turizm ve Yolcu Taşımacılığı",
+    category:"Turizm & Seyahat",
+    visual:"Yolculuk",
+    accent:"#B5CFE1",
+    soft:"#658DA83C",
+    idea:"Yolculuğun keşif, hareket ve deneyim boyutlarını sinematik bir reklam anlatısıyla ele alan turizm konsepti.",
+    strategy:"Ulaşım hizmetini yalnızca bir transfer değil, yolculuk deneyiminin parçası olarak yaratıcı bir dille yorumlamak.",
+    cover:"",
+    video:""
+  },
+
+  {
+    repo:"Endustriyel-Perspektif",
+    slug:"endustriyel-perspektif",
+    name:"Endüstriyel Perspektif",
+    subtitle:"60 Saniyelik Çok Sektörlü Tanıtım Filmi",
+    category:"Genel Tanıtım",
+    visual:"Endüstriyel Perspektif",
+    accent:"#C3E561",
+    soft:"#678C473D",
+    idea:"CNC, iş makineleri, lojistik, ahşap işleme ve rüzgâr enerjisini tek bir görsel anlatıda buluşturan 60 saniyelik endüstriyel tanıtım filmi.",
+    strategy:"Endüstrinin farklı disiplinlerini ortak bir anlatı altında birleştirerek hassasiyet, üretim, hareket, dönüşüm ve enerji temalarını bütüncül biçimde sunmak.",
+    cover:"",
+    video:""
+  }
+
+];
+
+/* ONAYLANAN KATEGORİLER */
+
+const CATEGORIES = [
   "Sanayi & İmalat",
   "Yapı & İnşaat",
   "Gayrimenkul",
@@ -308,138 +731,509 @@ CATS.splice(0, CATS.length,
   "Moda & Kozmetik",
   "Turizm & Seyahat",
   "Spor & Beslenme"
-);
-
-/* Türkçe harf içeren ve içermeyen depo adlarını tanı */
-function mkDepoAnahtari(ad) {
-  return String(ad || "")
-    .replace(/İ/g, "I")
-    .replace(/ı/g, "i")
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "");
-}
-
-/* Bütün başlıklar: Her Kelimenin İlk Harfi Büyük */
-const MK_PROJELER = [
-  {
-    ara: /endustri|showreel|tanitim-filmi/,
-    ad: "Endüstri 360",
-    alt: "60 Saniyelik Çok Sektörlü Tanıtım Filmi",
-    kategori: "Portföy Tanıtımı"
-  },
-  {
-    ara: /maybelline/,
-    ad: "Maybelline",
-    alt: "Kozmetik · AI Reklam Konsepti",
-    kategori: "Moda & Kozmetik"
-  },
-  {
-    ara: /protein|ocn/,
-    ad: "OCN Protein",
-    alt: "Sporcu Beslenmesi · AI Reklam Filmi",
-    kategori: "Spor & Beslenme"
-  },
-  {
-    ara: /turizm|seyahat|seyehat|yolcu-tasimaciligi/,
-    ad: "Turizm ve Seyahat",
-    alt: "Turizm ve Yolcu Taşımacılığı",
-    kategori: "Turizm & Seyahat"
-  },
-  {
-    ara: /continental|otomotiv/,
-    ad: "Continental",
-    alt: "Otomotiv · AI Reklam Konsepti",
-    kategori: "Otomotiv"
-  },
-  {
-    ara: /robot/,
-    ad: "Hareketin Mühendisliği",
-    alt: "Robotik Otomasyon · AI Reklam Filmi",
-    kategori: "Sanayi & İmalat"
-  },
-  {
-    ara: /is-makin|ismakin|trakt/,
-    ad: "Sahanın Gücü",
-    alt: "İş Makineleri · AI Reklam Filmi",
-    kategori: "Sanayi & İmalat"
-  },
-  {
-    ara: /plast|formun-otesinde/,
-    ad: "Formun Ötesinde",
-    alt: "Plastik Teknolojileri · AI Reklam Filmi",
-    kategori: "Sanayi & İmalat"
-  },
-  {
-    ara: /lojistik|senkron/,
-    ad: "Lojistik",
-    alt: "Lojistik ve Taşımacılık · AI Reklam Filmi",
-    kategori: "Lojistik"
-  },
-  {
-    ara: /gayrimenkul|emlak|mekana-dair/,
-    ad: "Gayrimenkul",
-    alt: "Gayrimenkul · AI Reklam Filmi",
-    kategori: "Gayrimenkul"
-  },
-  {
-    ara: /^cnc$|cnc-teknolojileri/,
-    ad: "Hassasiyetin Gücü",
-    alt: "CNC Teknolojileri · AI Reklam Filmi",
-    kategori: "Sanayi & İmalat"
-  }
 ];
 
-/* Depo adı eşleşmezse başlık biçimini yine düzelt */
-function mkBaslikBicimi(ad) {
-  const kisaltmalar = ["CNC", "OCN", "AI"];
-  return String(ad || "")
-    .replace(/[-_]+/g, " ")
-    .toLocaleLowerCase("tr")
-    .split(/\s+/)
-    .map(kelime => {
-      if (kisaltmalar.includes(kelime.toUpperCase())) {
-        return kelime.toUpperCase();
-      }
-      return kelime.charAt(0).toLocaleUpperCase("tr")
-        + kelime.slice(1);
-    })
-    .join(" ");
+const app = document.getElementById("app");
+
+/* GERÇEK GITHUB DEPO BAĞLANTISI */
+
+function repoLink(p){
+  return "https://github.com/" +
+    OWNER + "/" + encodeURIComponent(p.repo);
 }
 
-/* Siteye uygula; video bağlantılarını koru */
-const mkOrijinalLoadRepo = loadRepo;
+/* PROJE KAPAĞI */
 
-loadRepo = async function(repo) {
-  const proje = await mkOrijinalLoadRepo(repo);
-  const anahtar = mkDepoAnahtari(repo.name);
+function poster(p){
+  const image = p.cover
+    ? `<img src="${p.cover}" alt="${p.name} kapak görseli">`
+    : "";
 
-  const kural = MK_PROJELER.find(
-    x => x.ara.test(anahtar)
+  const fallback = p.cover
+    ? ""
+    : `
+      <span class="cover-label">Creative Direction / AI Advertising</span>
+      <span class="cover-word">${p.visual}</span>
+    `;
+
+  return `
+    <div class="cover"
+      style="--accent:${p.accent};--accent-soft:${p.soft}">
+      ${image}
+      ${fallback}
+    </div>
+  `;
+}
+
+/* PROJE KARTI */
+
+function projectCard(p){
+
+  const label = p.category === "Genel Tanıtım"
+    ? "Portföy Tanıtımı"
+    : p.category;
+
+  return `
+    <a class="card" href="?proje=${p.slug}">
+
+      ${poster(p)}
+
+      <div class="card-category">${label}</div>
+
+      <h3>${p.name}</h3>
+
+      <div class="card-sub">
+        ${p.subtitle} · AI Advertising
+      </div>
+
+      <span class="card-more">
+        Projeyi İncele ↗
+      </span>
+
+    </a>
+  `;
+}
+
+/* ANA SAYFA */
+
+function showHome(){
+
+  document.title =
+    "Merve Kırmızıgül | Creative Direction & AI Advertising";
+
+  const intro = PROJECTS.find(
+    p => p.slug === "endustriyel-perspektif"
   );
 
-  if (kural) {
-    proje.title = kural.ad;
-    proje.description = kural.alt;
-    proje.category = kural.kategori;
-  } else {
-    proje.title = mkBaslikBicimi(repo.name);
+  const visibleCategories = CATEGORIES.filter(
+    category => PROJECTS.some(p => p.category === category)
+  );
 
-    if (/mobilya|tasarim|furniture/.test(anahtar)) {
-      proje.category = "Mobilya & Tasarım";
-    } else if (/yapi|insaat/.test(anahtar)) {
-      proje.category = "Yapı & İnşaat";
-    }
-  }
+  app.innerHTML = `
 
-  return proje;
-};
+    <main>
 
-/* Web sitesini başlat */
-init();
+      <section class="hero">
+        <div class="container hero-content">
+
+          <div class="eyebrow">
+            Creative Direction / AI Advertising
+          </div>
+
+          <h1>
+            Yaratıcı fikirler.<br>
+            <span>Güçlü marka anlatıları.</span>
+          </h1>
+
+          <p>
+            Stratejik düşünceyi, yaratıcı yönetimi ve
+            yapay zekâ destekli görsel üretimi bir araya
+            getirerek farklı sektörler için reklam
+            konseptleri geliştiriyorum.
+          </p>
+
+          <a class="btn" href="#projeler">
+            Çalışmaları Keşfet ↗
+          </a>
+
+        </div>
+      </section>
+
+      <section id="projeler" class="section">
+        <div class="container">
+
+          <div class="eyebrow">
+            Selected Work / Portfolio
+          </div>
+
+          <h2>Projeler</h2>
+
+          <a class="featured"
+            href="?proje=endustriyel-perspektif">
+
+            <div>
+              <div class="eyebrow">
+                Öne Çıkan Tanıtım Filmi / 60 Saniye
+              </div>
+
+              <h3>Endüstriyel Perspektif</h3>
+
+              <p>
+                Üretim, lojistik, iş makineleri,
+                ahşap işleme ve rüzgâr enerjisini
+                bir araya getiren çok sektörlü
+                sinematik tanıtım filmi.
+              </p>
+
+              <span class="card-more">
+                Tanıtım Filmini İncele ↗
+              </span>
+            </div>
+
+            ${poster(intro)}
+
+          </a>
+
+          <div class="filters" id="filters">
+
+            <button
+              class="filter active"
+              data-category="Tüm Projeler">
+              Tüm Projeler
+            </button>
+
+            ${visibleCategories.map(category=>`
+              <button
+                class="filter"
+                data-category="${category}">
+                ${category}
+              </button>
+            `).join("")}
+
+          </div>
+
+          <div class="projects" id="projectGrid">
+            ${PROJECTS.map(projectCard).join("")}
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+
+          <div class="eyebrow">Expertise</div>
+          <h2>Çalışma Alanlarım</h2>
+
+          <div class="service-grid">
+
+            <div class="service">
+              <div class="service-number">01</div>
+              <h3>Creative Direction</h3>
+              <p>
+                Yaratıcı konsept, görsel dil,
+                sanat yönetimi ve reklam anlatımı.
+              </p>
+            </div>
+
+            <div class="service">
+              <div class="service-number">02</div>
+              <h3>AI Reklam Filmleri</h3>
+              <p>
+                Yapay zekâ destekli sinematik
+                reklam filmi konseptleri.
+              </p>
+            </div>
+
+            <div class="service">
+              <div class="service-number">03</div>
+              <h3>AI Reklam Görselleri</h3>
+              <p>
+                Ürün, marka ve kampanya odaklı
+                yaratıcı görsel üretim.
+              </p>
+            </div>
+
+            <div class="service">
+              <div class="service-number">04</div>
+              <h3>Stratejik İletişim</h3>
+              <p>
+                Hedef kitle, marka mesajı ve
+                yaratıcı iletişim yaklaşımı.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <section id="hakkimda" class="section">
+        <div class="container">
+
+          <div class="eyebrow">About Me</div>
+          <h2>Hakkımda</h2>
+
+          <div class="about-text">
+
+            <p>
+              Ben Merve Kırmızıgül.
+              Creative Direction ve yapay zekâ
+              destekli reklamcılık alanlarında
+              yaratıcı projeler geliştiriyorum.
+            </p>
+
+            <p>
+              Endüstriyel teknolojilerden kozmetiğe,
+              otomotivden seyahate kadar farklı
+              sektörlerin iletişim ihtiyaçlarını
+              stratejik bakış açısı ve görsel
+              hikâye anlatımıyla ele alıyorum.
+            </p>
+
+            <p>
+              Amacım, yaratıcı fikri yalnızca
+              güçlü bir görsele değil,
+              tutarlı ve etkili bir marka
+              anlatısına dönüştürmek.
+            </p>
+
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section faq">
+        <div class="container">
+
+          <div class="eyebrow">FAQ</div>
+          <h2>Sık Sorulan Sorular</h2>
+
+          <details>
+            <summary>
+              Hangi sektörlerde çalışıyorsunuz?
+            </summary>
+            <p>
+              Sanayi, otomotiv, gayrimenkul,
+              lojistik, kozmetik, turizm ve
+              sporcu beslenmesi gibi farklı
+              sektörler için yaratıcı reklam
+              konseptleri geliştiriyorum.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              AI reklam filmi nedir?
+            </summary>
+            <p>
+              Yapay zekâ araçlarıyla desteklenen,
+              yaratıcı konsept ve sanat yönetimiyle
+              geliştirilen reklam filmi yaklaşımıdır.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Creative Direction neleri kapsar?
+            </summary>
+            <p>
+              Konsept geliştirme, görsel kimlik,
+              anlatım ritmi, kompozisyon ve
+              yaratıcı kararların yönetilmesini
+              kapsar.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Bir projeye nasıl başlanır?
+            </summary>
+            <p>
+              Öncelikle ürün, marka, hedef kitle
+              ve iletişim ihtiyacı değerlendirilir.
+              Ardından kreatif yaklaşım belirlenir.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Portföyde bağımsız çalışmalar var mı?
+            </summary>
+            <p>
+              Evet. Portföyde bağımsız reklam
+              konseptleri de yer alabilir.
+              Resmî marka iş birliği olmayan
+              çalışmalar buna uygun şekilde
+              tanımlanır.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Nasıl iletişime geçebilirim?
+            </summary>
+            <p>
+              Instagram üzerinden iletişime
+              geçerek proje detaylarını
+              paylaşabilirsiniz.
+            </p>
+          </details>
+
+        </div>
+      </section>
+
+      <section id="iletisim"
+        class="section contact">
+
+        <div class="container">
+
+          <div class="eyebrow">
+            Let's Collaborate
+          </div>
+
+          <h2>
+            Bir fikriniz mi var?<br>
+            <span>Birlikte geliştirelim.</span>
+          </h2>
+
+          <p class="muted">
+            Reklam filmleri, yaratıcı kampanyalar
+            ve AI destekli görsel projeler
+            üzerine konuşalım.
+          </p>
+
+          <a class="btn"
+            href="https://www.instagram.com/ross.creativestudio/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Projenizi Konuşalım ↗
+          </a>
+
+        </div>
+      </section>
+
+    </main>
+  `;
+
+  /* KATEGORİ FİLTRELERİ */
+
+  const grid = document.getElementById("projectGrid");
+
+  document.querySelectorAll("[data-category]")
+    .forEach(button => {
+
+      button.addEventListener("click",()=>{
+
+        const selected = button.dataset.category;
+
+        document.querySelectorAll("[data-category]")
+          .forEach(b=>{
+            b.classList.toggle("active",b===button);
+          });
+
+        const filtered = selected === "Tüm Projeler"
+          ? PROJECTS
+          : PROJECTS.filter(
+              p => p.category === selected
+            );
+
+        grid.innerHTML =
+          filtered.map(projectCard).join("");
+
+      });
+
+    });
+
+}
+
+/* HER PROJENİN DETAY GÖRÜNÜMÜ */
+
+function showDetail(p){
+
+  document.title =
+    p.name + " | Merve Kırmızıgül";
+
+  const label = p.category === "Genel Tanıtım"
+    ? "Portföy Tanıtımı"
+    : p.category;
+
+  app.innerHTML = `
+
+    <main class="container detail">
+
+      <a href="./#projeler" class="back">
+        ← Tüm Projelere Dön
+      </a>
+
+      <div class="eyebrow" style="margin-top:35px">
+        ${label} / AI Advertising
+      </div>
+
+      <h1>${p.name}</h1>
+
+      <div class="detail-sub">
+        ${p.subtitle}
+      </div>
+
+      ${poster(p)}
+
+      <div class="detail-grid">
+
+        <div>
+          <h3>01 / Proje Özeti</h3>
+          <p>${p.idea}</p>
+        </div>
+
+        <div>
+          <h3>02 / Creative Direction</h3>
+          <p>${p.strategy}</p>
+        </div>
+
+      </div>
+
+      <div class="media-area">
+
+        <div class="eyebrow">
+          03 / Reklam Filmi ve Görsel Galeri
+        </div>
+
+        ${
+          p.video
+          ? `
+            <video
+              src="${p.video}"
+              controls
+              playsinline
+              preload="metadata">
+            </video>
+          `
+          : `
+            <p class="muted">
+              Bu ilk sürümde reklam videosu
+              henüz web sitesine bağlanmadı.
+              Orijinal çalışma dosyaları
+              GitHub deposunda korunuyor.
+            </p>
+          `
+        }
+
+        <a
+          class="repo-link"
+          href="${repoLink(p)}"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Proje Dosyalarını Gör ↗
+
+        </a>
+
+      </div>
+
+    </main>
+
+  `;
+}
+
+/* SİTEYİ BAŞLAT — GITHUB API İSTEĞİ YOK */
+
+const params = new URLSearchParams(
+  window.location.search
+);
+
+const slug = params.get("proje");
+
+const activeProject = PROJECTS.find(
+  p => p.slug === slug
+);
+
+if(activeProject){
+  showDetail(activeProject);
+}else{
+  showHome();
+}
 
 </script>
 </body>
 </html>
+
