@@ -733,6 +733,55 @@ const CATEGORIES = [
   "Spor & Beslenme"
 ];
 
+/* 11 REKLAMIN GERÇEK VİDEO DOSYALARI */
+/* GitHub API kullanılmaz. */
+
+const VIDEO_DOSYALARI = {
+  "CNC": "CNC.PROJE 01.mp4",
+
+  "Robotik-Otomasyon": "PROJE 02.mp4",
+
+  "Is-Makineleri": "PROJE 04 EKSTRA.mp4",
+
+  "Plastik-Teknolojileri-Formun-Otesinde":
+    "WhatsApp Video 2026-10-14 at 17.26.09.mp4",
+
+  "Lojistik": "PROJE 03.mp4",
+
+  "Gayrimenkul":
+    "WhatsApp Video 2026-10-14 at 18.36.06.mp4",
+
+  "Otomotiv":
+    "WhatsApp Video 2026-10-14 at 18.22.36.mp4",
+
+  "Kozmetik-Moda":
+    "WhatsApp Video 2026-10-14 at 18.22.35.mp4",
+
+  "Spor-Beslenme":
+    "WhatsApp Video 2026-10-14 at 18.22.34.mp4",
+
+  "Turizm-Seyahat":
+    "WhatsApp Video 2026-10-14 at 18.22.47.mp4",
+
+  "Endustriyel-Perspektif":
+    "WhatsApp Video 2026-10-14 at 18.22.37.mp4"
+};
+
+/* Videoları ilgili projeye bağla */
+
+PROJECTS.forEach(proje => {
+  const dosya = VIDEO_DOSYALARI[proje.repo];
+
+  if (dosya) {
+    proje.video =
+      "https://raw.githubusercontent.com/" +
+      OWNER + "/" +
+      encodeURIComponent(proje.repo) +
+      "/main/" +
+      encodeURIComponent(dosya);
+  }
+});
+
 const app = document.getElementById("app");
 
 /* GERÇEK GITHUB DEPO BAĞLANTISI */
