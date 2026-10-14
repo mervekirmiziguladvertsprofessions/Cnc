@@ -294,7 +294,152 @@ async function init(){
  el("projectGrid").innerHTML='<p class="muted">Projeler geçici olarak yüklenemedi. <a class="lime" href="https://github.com/'+USER+'" target="_blank" rel="noopener noreferrer">GitHub çalışmalarını aç ↗</a></p>';
  }
 }
+
+/* MERVE KIRMIZIGÜL — KATEGORİ VE İSİM DÜZENİ */
+
+/* Onaylanan kategoriler */
+CATS.splice(0, CATS.length,
+  "Sanayi & İmalat",
+  "Yapı & İnşaat",
+  "Gayrimenkul",
+  "Lojistik",
+  "Otomotiv",
+  "Mobilya & Tasarım",
+  "Moda & Kozmetik",
+  "Turizm & Seyahat",
+  "Spor & Beslenme"
+);
+
+/* Türkçe harf içeren ve içermeyen depo adlarını tanı */
+function mkDepoAnahtari(ad) {
+  return String(ad || "")
+    .replace(/İ/g, "I")
+    .replace(/ı/g, "i")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+/* Bütün başlıklar: Her Kelimenin İlk Harfi Büyük */
+const MK_PROJELER = [
+  {
+    ara: /endustri|showreel|tanitim-filmi/,
+    ad: "Endüstri 360",
+    alt: "60 Saniyelik Çok Sektörlü Tanıtım Filmi",
+    kategori: "Portföy Tanıtımı"
+  },
+  {
+    ara: /maybelline/,
+    ad: "Maybelline",
+    alt: "Kozmetik · AI Reklam Konsepti",
+    kategori: "Moda & Kozmetik"
+  },
+  {
+    ara: /protein|ocn/,
+    ad: "OCN Protein",
+    alt: "Sporcu Beslenmesi · AI Reklam Filmi",
+    kategori: "Spor & Beslenme"
+  },
+  {
+    ara: /turizm|seyahat|seyehat|yolcu-tasimaciligi/,
+    ad: "Turizm ve Seyahat",
+    alt: "Turizm ve Yolcu Taşımacılığı",
+    kategori: "Turizm & Seyahat"
+  },
+  {
+    ara: /continental|otomotiv/,
+    ad: "Continental",
+    alt: "Otomotiv · AI Reklam Konsepti",
+    kategori: "Otomotiv"
+  },
+  {
+    ara: /robot/,
+    ad: "Hareketin Mühendisliği",
+    alt: "Robotik Otomasyon · AI Reklam Filmi",
+    kategori: "Sanayi & İmalat"
+  },
+  {
+    ara: /is-makin|ismakin|trakt/,
+    ad: "Sahanın Gücü",
+    alt: "İş Makineleri · AI Reklam Filmi",
+    kategori: "Sanayi & İmalat"
+  },
+  {
+    ara: /plast|formun-otesinde/,
+    ad: "Formun Ötesinde",
+    alt: "Plastik Teknolojileri · AI Reklam Filmi",
+    kategori: "Sanayi & İmalat"
+  },
+  {
+    ara: /lojistik|senkron/,
+    ad: "Lojistik",
+    alt: "Lojistik ve Taşımacılık · AI Reklam Filmi",
+    kategori: "Lojistik"
+  },
+  {
+    ara: /gayrimenkul|emlak|mekana-dair/,
+    ad: "Gayrimenkul",
+    alt: "Gayrimenkul · AI Reklam Filmi",
+    kategori: "Gayrimenkul"
+  },
+  {
+    ara: /^cnc$|cnc-teknolojileri/,
+    ad: "Hassasiyetin Gücü",
+    alt: "CNC Teknolojileri · AI Reklam Filmi",
+    kategori: "Sanayi & İmalat"
+  }
+];
+
+/* Depo adı eşleşmezse başlık biçimini yine düzelt */
+function mkBaslikBicimi(ad) {
+  const kisaltmalar = ["CNC", "OCN", "AI"];
+  return String(ad || "")
+    .replace(/[-_]+/g, " ")
+    .toLocaleLowerCase("tr")
+    .split(/\s+/)
+    .map(kelime => {
+      if (kisaltmalar.includes(kelime.toUpperCase())) {
+        return kelime.toUpperCase();
+      }
+      return kelime.charAt(0).toLocaleUpperCase("tr")
+        + kelime.slice(1);
+    })
+    .join(" ");
+}
+
+/* Siteye uygula; video bağlantılarını koru */
+const mkOrijinalLoadRepo = loadRepo;
+
+loadRepo = async function(repo) {
+  const proje = await mkOrijinalLoadRepo(repo);
+  const anahtar = mkDepoAnahtari(repo.name);
+
+  const kural = MK_PROJELER.find(
+    x => x.ara.test(anahtar)
+  );
+
+  if (kural) {
+    proje.title = kural.ad;
+    proje.description = kural.alt;
+    proje.category = kural.kategori;
+  } else {
+    proje.title = mkBaslikBicimi(repo.name);
+
+    if (/mobilya|tasarim|furniture/.test(anahtar)) {
+      proje.category = "Mobilya & Tasarım";
+    } else if (/yapi|insaat/.test(anahtar)) {
+      proje.category = "Yapı & İnşaat";
+    }
+  }
+
+  return proje;
+};
+
+/* Web sitesini başlat */
 init();
+
 </script>
 </body>
 </html>
