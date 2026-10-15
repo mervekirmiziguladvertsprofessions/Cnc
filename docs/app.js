@@ -4,9 +4,9 @@ const CATS=["Portföy Tanıtımı","Sanayi & İmalat","Yapı & İnşaat","Gayrim
 let active="Tüm Projeler";
 const el=id=>document.getElementById(id);
 const escapeHTML=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-function mediaTag(m,preview=false){
+function mediaTag(m,preview=false,poster=""){
  const url=escapeHTML(m.url);
- if(m.video)return '<video src="'+url+'" controls playsinline preload="none" width="'+m.width+'" height="'+m.height+'" aria-label="Proje filmi"></video>';
+ if(m.video)return '<video src="'+url+'" poster="'+escapeHTML(poster)+'" controls playsinline preload="none" width="'+m.width+'" height="'+m.height+'" aria-label="Proje filmi"></video>';
  return '<img src="'+url+'" loading="lazy" alt="Proje görseli">';
 }
 function renderFilters(){
@@ -37,7 +37,7 @@ function renderGrid(){
 function detailPage(p){
  el("homepage").hidden=true;el("detail").hidden=false;
  document.title=p.title+" | Merve Kırmızıgül";
- el("detailBody").innerHTML='<div class="small">'+escapeHTML(p.category)+'</div><h1>'+escapeHTML(p.title)+'</h1><p class="muted">'+escapeHTML(p.description)+'</p><div class="detail-media">'+p.media.map(m=>mediaTag(m)).join("")+'</div><p><a class="btn" target="_blank" rel="noopener noreferrer" href="'+escapeHTML(p.github)+'">Proje Dosyaları ↗</a></p>';
+ el("detailBody").innerHTML='<div class="small">'+escapeHTML(p.category)+'</div><h1>'+escapeHTML(p.title)+'</h1><p class="muted">'+escapeHTML(p.description)+'</p><div class="detail-media">'+p.media.map(m=>mediaTag(m,false,p.poster)).join("")+'</div><p><a class="btn" target="_blank" rel="noopener noreferrer" href="'+escapeHTML(p.github)+'">Proje Dosyaları ↗</a></p>';
  el("detailBody").querySelectorAll("video").forEach(v=>v.addEventListener("error",()=>{
  const message=document.createElement("p");message.className="muted";message.textContent="Video yüklenemedi. Proje Dosyaları bağlantısından filme ulaşabilirsiniz.";v.after(message);
  },{once:true}));

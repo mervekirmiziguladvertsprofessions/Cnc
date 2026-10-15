@@ -22,7 +22,7 @@ Türkçe kategori sözlüğü korunur; yalnızca proje içeren kategoriler filtr
 
 ## Doğrulama ve inceleme
 
-`node scripts/verify.cjs`, iki JavaScript dosyası için `node --check` ve `git diff --check` geçti. Medya boyutları ffprobe ile yerel özgünlerden okundu. Tarayıcıda görsel/mobil inceleme ve uzak medya oynatma doğrulaması yapılmadı; uzak medya GitHub raw erişimine bağımlı kalır. Film yüklenemezse proje deposuna bağlantı sunulur.
+`node scripts/verify.cjs`, iki JavaScript dosyası için `node --check` ve `git diff --check` geçti. Medya boyutları ffprobe ile yerel özgünlerden okundu. İlk hazırlıkta tarayıcı testi yapılmamıştı; sonraki tarayıcı testleri ve iki düzeltme `TARAYICI-TESTLERI.md` içinde belgelendi; uzak medya GitHub raw erişimine bağımlı kalır. Film yüklenemezse proje deposuna bağlantı sunulur.
 
 Yerelde incelemek için Cnc içinde `python -m http.server 8000 --directory docs` çalıştırıp `http://localhost:8000` adresini açabilirsiniz. `?proje=Cnc` detay sayfası örneğidir.
 
@@ -30,4 +30,4 @@ Hiçbir dosya silinmedi. Yeni depo oluşturulmadı; Pages ayarları değiştiril
 
 ## PR öncesi ek kontrol
 
-11 JPEG kapak ve özgün İngiliz anahtarı görseli temas sayfasında görsel olarak incelendi. Dikey/yatay kapak oranları korundu; video boyutları özgün dosyalarla karşılaştırıldı. Türkçe eşlemeler ve 25 medya kaydı doğrulandı. Tarayıcıda oynatma kontrolü yapılmadı.
+11 JPEG kapak ve özgün İngiliz anahtarı görseli temas sayfasında görsel olarak incelendi. Dikey/yatay kapak oranları korundu; video boyutları özgün dosyalarla karşılaştırıldı. Türkçe eşlemeler ve 25 medya kaydı doğrulandı. Sonraki Chromium oynatma, mobil ve dokunmatik kontrolleri `TARAYICI-TESTLERI.md` içinde belgelendi.
