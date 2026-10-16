@@ -11,12 +11,12 @@ assert.equal(projects.length,11);assert.equal(new Set(projects.map(p=>p.name)).s
 assert.equal((nodes.projectGrid.innerHTML.match(/class="project"/g)||[]).length,11);
 for(const p of projects){
  assert(fs.existsSync(path.join(root,'docs',p.poster)));
- assert(p.media.some(m=>m.video));
+ assert(p.media.some(m=>m.video));assert(p.overview&&p.approach&&p.role&&p.disclosure);
  for(const m of p.media){assert.match(m.url,/raw\.githubusercontent\.com\/[^/]+\/[^/]+\/[a-f0-9]{40}\//);if(m.video){assert(m.width>0&&m.height>0)}}
  const detail=run('?proje='+encodeURIComponent(p.name));assert.equal(detail.nodes.homepage.hidden,true);assert(detail.nodes.detailBody.innerHTML.includes(p.title));assert(detail.context.document.title.startsWith(p.title));
 }
-vm.runInContext('active="Sanayi & İmalat";renderGrid()',context);assert.equal((nodes.projectGrid.innerHTML.match(/class="project"/g)||[]).length,4);
+vm.runInContext('active="Endüstri & Teknoloji";renderGrid()',context);assert.equal((nodes.projectGrid.innerHTML.match(/class="project"/g)||[]).length,5);
 assert(run('?proje=olmayan').nodes.detailBody.innerHTML.includes('Proje bulunamadı'));
 assert(!app.includes('fetch('));assert(!data.includes('api.github.com'));
 const html=fs.readFileSync(path.join(root,'docs/index.html'),'utf8');assert(html.includes('hero-ingiliz-anahtari.png.png'));assert(html.includes('object-fit:contain'));
-console.log('PASS: 11 proje, 11 detay rotası, kategori filtresi, bilinmeyen rota, yerel kapaklar, sabit medya adresleri, API bağımsız açılış.');
+console.log('PASS: 11 proje, 11 detay rotası, 4 ana kategori filtresi, bilinmeyen rota, yerel kapaklar, sabit medya adresleri, API bağımsız açılış.');
