@@ -48,7 +48,7 @@ async def main(args):
     print('CHECK',width,p['name'],flush=True)
     await page.goto(args.base+'?proje='+quote(p['name']),wait_until='domcontentloaded')
     assert await page.locator('#detail h1').inner_text()==p['title']
-    assert await page.locator('#detail .small').inner_text()==p['category']
+    assert await page.locator('#detailBody > .small').inner_text()==p['category']
     for image in await page.locator('#detail img').all():
      await image.scroll_into_view_if_needed();await image.evaluate('(i)=>i.decode()')
     assert await page.evaluate('document.documentElement.scrollWidth<=innerWidth')
