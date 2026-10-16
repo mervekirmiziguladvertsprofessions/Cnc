@@ -101,6 +101,18 @@ nav{flex-direction:column;align-items:flex-start;padding:16px 0}
 .case-panel p{color:var(--gray);font-size:14px;margin-top:10px}
 .case-disclosure{color:var(--gray);font-size:12px;border-left:2px solid var(--lime);padding-left:14px;margin:25px 0}
 @media(max-width:760px){.case-panel{grid-template-columns:1fr;gap:8px}}
+
+/* Portföy kapakları: 9:16 görselleri kırpmadan göster, arka planı yumuşat */
+.cover{position:relative;isolation:isolate;overflow:hidden;background:#101717}
+.cover .cover-bg,.cover .cover-fg{position:absolute;inset:0;width:100%;height:100%}
+.cover .cover-bg{object-fit:cover;filter:blur(26px) brightness(.38) saturate(.85);transform:scale(1.12)}
+.cover .cover-fg{object-fit:contain;z-index:1}
+/* Büyük ekranda tüm filtreler görünür; dar ekranda kaydırma çubuğu görünmez */
+.filters{flex-wrap:wrap;overflow-x:visible;padding-bottom:18px}
+@media(max-width:760px){
+ .filters{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;overscroll-behavior-x:contain}
+ .filters::-webkit-scrollbar{display:none}
+}
 </style>
 </head>
 <body>
