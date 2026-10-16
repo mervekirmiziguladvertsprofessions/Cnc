@@ -20,6 +20,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Generate 11 creative project graphics
+        run: |
+          python -m pip install Pillow
+          python scripts/generate-creative-covers.py --posters docs/posters --output /tmp/creative-covers
+      - name: Upload creative project graphics
+        uses: actions/upload-artifact@v4
+        with:
+          name: creative-11-project-graphics
+          path: /tmp/creative-covers
+          if-no-files-found: error
       - name: Install browser dependencies
         run: |
           python -m pip install --upgrade pip

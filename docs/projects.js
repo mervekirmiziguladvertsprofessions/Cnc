@@ -2,7 +2,7 @@ window.PORTFOLIO_PROJECTS = [
   {
     "name": "Endustriyel-Perspektif",
     "title": "Endüstri 360",
-    "description": "60 Saniyelik Çok Sektörlü Tanıtım Filmi",
+    "description": "60 saniyelik çok sektörlü endüstriyel anlatı",
     "category": "Sanayi & İmalat",
     "media": [
       {
@@ -15,15 +15,15 @@ window.PORTFOLIO_PROJECTS = [
     "poster": "./posters/Endustriyel-Perspektif.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Endustriyel-Perspektif",
     "branch": "f6baeac6869be09c4b000911c00ec92d72598713",
-    "overview": "Farklı üretim alanlarını tek bir görsel anlatıda birleştiren, endüstriyel yetkinliği öne çıkaran bağımsız portföy filmi.",
-    "approach": "Çok sektörlü görüntüler arasında ortak tempo ve görsel bütünlük kurmak.",
-    "role": "Kreatif konsept, yapay zekâ destekli görsel / video üretimi",
+    "overview": "Endüstri 360, farklı üretim disiplinlerini tek bir anlatıda buluşturan bağımsız bir portföy filmidir. Amaç, makineleri yalnızca göstermek değil; üretim dünyasının ölçeğini, çeşitliliğini ve sürekliliğini güçlü bir marka anlatısına dönüştürmektir.",
+    "approach": "Farklı sektörleri ortak bir görsel ritimde birleştiren kurgu yaklaşımı benimsendi. Geniş ölçekli üretim atmosferi ile ayrıntı odaklı kadrajlar arasında kurulan denge, filmin bütünlüğünü taşıyor.",
+    "role": "Kreatif konsept · Görsel anlatı planlaması · Yapay zekâ destekli video üretimi",
     "disclosure": "Bağımsız portföy konsepti. İlgili marka veya kurumun resmî reklamı ya da onaylı iş birliği değildir."
   },
   {
     "name": "Cnc",
     "title": "Hassasiyetin Gücü",
-    "description": "CNC Teknolojileri · AI Reklam Filmi",
+    "description": "CNC teknolojileri için hassasiyet odaklı reklam konsepti",
     "category": "Sanayi & İmalat",
     "media": [
       {
@@ -36,15 +36,15 @@ window.PORTFOLIO_PROJECTS = [
     "poster": "./posters/Cnc.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Cnc",
     "branch": "19aa1c165ae0b8bbb7a7d9cb974f1a9c8e8f9591",
-    "overview": "CNC ve hassas üretim teknolojilerini yakın planlar, ritim ve sinematik görsel dille anlatan reklam konsepti.",
-    "approach": "Hassasiyet, yüzey dokusu ve mekanik hareketi anlatının merkezine yerleştirmek.",
-    "role": "Kreatif konsept, yapay zekâ destekli görsel / video üretimi",
+    "overview": "Hassasiyetin Gücü, CNC üretiminin teknik karakterini sinematik bir iletişim diline taşıyan bağımsız bir reklam çalışmasıdır. Proje, işleme teknolojisinin merkezindeki kontrol ve milimetrik doğruluk fikrini görsel bir marka değerine dönüştürmeyi hedefler.",
+    "approach": "Metal yüzeylerin dokusu, mekanik hareketin kontrollü ritmi ve detay kadrajları yaratıcı omurgayı oluşturuyor. Endüstriyel estetik, güçlü kontrast ve ölçülü kamera yaklaşımıyla destekleniyor.",
+    "role": "Kreatif konsept · Yapay zekâ destekli video üretimi · Görsel yönlendirme",
     "disclosure": "Bağımsız portföy konsepti. İlgili marka veya kurumun resmî reklamı ya da onaylı iş birliği değildir."
   },
   {
     "name": "Robotik-Otomasyon",
     "title": "Hareketin Mühendisliği",
-    "description": "Robotik Otomasyon · AI Reklam Filmi",
+    "description": "Robotik otomasyonun hareket ve kontrol odaklı anlatımı",
     "category": "Sanayi & İmalat",
     "media": [
       {
@@ -57,15 +57,15 @@ window.PORTFOLIO_PROJECTS = [
     "poster": "./posters/Robotik-Otomasyon.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Robotik-Otomasyon",
     "branch": "95ac0cff25705030a992e636acf28c515e40bbe6",
-    "overview": "Robotik otomasyonun hareket, kontrol ve hassasiyet boyutlarını görselleştirmeye odaklanan film konsepti.",
-    "approach": "Makine hareketini anlaşılır ve etkileyici bir görsel ritimle sunmak.",
-    "role": "Kreatif konsept, yapay zekâ destekli görsel / video üretimi",
+    "overview": "Hareketin Mühendisliği, robotik otomasyonun işleyişini teknoloji odaklı bir reklam diliyle yorumlayan bağımsız bir konsepttir. Odak noktası, karmaşık sistemleri teknik bir katalog gibi sunmak yerine hareket, koordinasyon ve hassasiyet üzerinden anlaşılır kılmaktır.",
+    "approach": "Mekanik hareketler ve tekrarlanan operasyonlar görsel ritmin kaynağı olarak ele alındı. Kadraj, ışık ve tempo tercihleriyle otomasyonun kontrollü ve sistematik doğası öne çıkarılıyor.",
+    "role": "Kreatif konsept · Hareket odaklı görsel anlatım · Yapay zekâ destekli video üretimi",
     "disclosure": "Bağımsız portföy konsepti. İlgili marka veya kurumun resmî reklamı ya da onaylı iş birliği değildir."
   },
   {
     "name": "Is-Makineleri",
     "title": "Sahanın Gücü",
-    "description": "İş Makineleri · AI Reklam Filmi",
+    "description": "İş makinelerinde ölçek, dayanıklılık ve saha etkisi",
     "category": "Yapı & İnşaat",
     "media": [
       {
@@ -96,15 +96,15 @@ window.PORTFOLIO_PROJECTS = [
     "poster": "./posters/Is-Makineleri.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Is-Makineleri",
     "branch": "167a6fa27444badb29b2c714da8f0ec7239e67a8",
-    "overview": "İş makinelerinin sahadaki ölçeğini ve gücünü görünür kılan endüstriyel reklam konsepti.",
-    "approach": "Ölçek, hareket ve malzeme dokusunu ön plana çıkarmak.",
-    "role": "Kreatif konsept, yapay zekâ destekli görsel / video üretimi",
+    "overview": "Sahanın Gücü, iş makinelerinin endüstriyel kimliğini ve çalışma ortamındaki etkisini ön plana çıkaran bağımsız bir reklam konseptidir. Proje, teknik ürün iletişiminde gücü yalnızca iddia etmek yerine ölçek, hareket ve çevre ilişkisiyle hissettirmeyi amaçlar.",
+    "approach": "Geniş saha kompozisyonları, makine detayları ve güçlü perspektifler üzerine kurulu bir görsel dil tercih edildi. Ağır ekipmanın karakteri, hareket ve malzeme dokusunun dengeli kullanımıyla vurgulanıyor.",
+    "role": "Kreatif konsept · Yapay zekâ destekli video ve kampanya görselleri · Görsel yönlendirme",
     "disclosure": "Bağımsız portföy konsepti. İlgili marka veya kurumun resmî reklamı ya da onaylı iş birliği değildir."
   },
   {
     "name": "Plastik-Teknolojileri-Formun-Otesinde",
     "title": "Formun Ötesinde",
-    "description": "Plastik Teknolojileri · AI Reklam Filmi",
+    "description": "Plastik teknolojilerinde malzeme, form ve üretim estetiği",
     "category": "Sanayi & İmalat",
     "media": [
       {
@@ -141,15 +141,15 @@ window.PORTFOLIO_PROJECTS = [
     "poster": "./posters/Plastik-Teknolojileri-Formun-Otesinde.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Plastik-Teknolojileri-Formun-Otesinde",
     "branch": "cf6c4d588724eadf6ea58c55e912106dd88df39b",
-    "overview": "Plastik teknolojilerini biçim ve malzeme üzerinden anlatan görsel kampanya konsepti.",
-    "approach": "Ürün formları ve üretim estetiğini tutarlı bir görsel seride bir araya getirmek.",
-    "role": "Kreatif konsept, yapay zekâ destekli görsel / video üretimi",
+    "overview": "Formun Ötesinde, plastik teknolojilerinin tasarım ve üretim potansiyelini merkeze alan bağımsız bir görsel kampanya konseptidir. Proje, malzemeyi yalnızca ham madde olarak değil; biçime, işleve ve ürün kimliğine dönüşen bir tasarım unsuru olarak ele alır.",
+    "approach": "Yüzey, geometri ve form ilişkisi tutarlı bir görsel seriyle yorumlandı. Ürün biçimlerinin net okunması, kontrollü ışık ve sade kompozisyonlar kampanya dilini bir arada tutuyor.",
+    "role": "Kreatif konsept · Kampanya görsel tasarımı · Yapay zekâ destekli video ve görsel üretimi",
     "disclosure": "Bağımsız portföy konsepti. İlgili marka veya kurumun resmî reklamı ya da onaylı iş birliği değildir."
   },
   {
     "name": "Lojistik",
     "title": "Lojistik",
-    "description": "Lojistik ve Taşımacılık · AI Reklam Filmi",
+    "description": "Taşımacılık ve tedarik akışı için görsel iletişim konsepti",
     "category": "Lojistik",
     "media": [
       {
@@ -178,15 +178,15 @@ window.PORTFOLIO_PROJECTS = [
     "poster": "./posters/Lojistik.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Lojistik",
     "branch": "784c9c9e07ea3e2acfae95c13cc2c2878427ffd0",
-    "overview": "Lojistik ve taşımacılık alanında hareket ve koordinasyon temalarını öne çıkaran tanıtım konsepti.",
-    "approach": "Taşıma süreçlerini akış ve kompozisyonla anlatmak.",
-    "role": "Kreatif konsept, yapay zekâ destekli görsel / video üretimi",
+    "overview": "Bu çalışma, lojistiği tek bir taşıma aracından daha geniş bir sistem olarak yorumlayan bağımsız bir portföy konseptidir. Hareket, koordinasyon ve teslimat zincirindeki süreklilik; sektöre yönelik güçlü ve anlaşılır bir tanıtım dili oluşturmak için temel alınmıştır.",
+    "approach": "Araçlar, taşıma süreçleri ve operasyonel akış arasındaki ilişki görsel bütünlükle ele alındı. Perspektif ve ritim tercihleri, hareketin yanı sıra düzen ve güven duygusunu da destekliyor.",
+    "role": "Kreatif konsept · Kampanya görselleri · Yapay zekâ destekli reklam filmi üretimi",
     "disclosure": "Bağımsız portföy konsepti. İlgili marka veya kurumun resmî reklamı ya da onaylı iş birliği değildir."
   },
   {
     "name": "Gayrimenkul",
     "title": "Gayrimenkul",
-    "description": "Gayrimenkul · AI Reklam Filmi",
+    "description": "Mimari mekânı ışık ve kompozisyonla anlatan reklam filmi",
     "category": "Gayrimenkul",
     "media": [
       {
@@ -199,15 +199,15 @@ window.PORTFOLIO_PROJECTS = [
     "poster": "./posters/Gayrimenkul.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Gayrimenkul",
     "branch": "206e92c1e92a4409ff662d4e17ca408eeccd96c4",
-    "overview": "Gayrimenkul sunumunda mekân, ışık ve kamera hareketine odaklanan tanıtım filmi konsepti.",
-    "approach": "Mekânın algısını temiz kadrajlar ve akıcı geçişlerle güçlendirmek.",
-    "role": "Kreatif konsept, yapay zekâ destekli görsel / video üretimi",
+    "overview": "Gayrimenkul konsepti, bir yaşam alanının özelliklerini yalnızca sıralamak yerine mekânsal deneyimi ön plana çıkarmayı amaçlayan bağımsız bir tanıtım çalışmasıdır. Mimari çizgiler, ışık ve kamera hareketi üzerinden sade, güven veren ve seçici bir sunum dili hedeflenmiştir.",
+    "approach": "Mekânın oranlarını anlaşılır gösteren temiz kadrajlar ve akıcı kamera geçişleri merkeze alındı. Görsel kalabalıktan kaçınarak hacim, malzeme ve atmosferin öne çıktığı bir anlatı benimsendi.",
+    "role": "Kreatif konsept · Mimari görsel yönlendirme · Yapay zekâ destekli tanıtım filmi",
     "disclosure": "Bağımsız portföy konsepti. İlgili marka veya kurumun resmî reklamı ya da onaylı iş birliği değildir."
   },
   {
     "name": "Kozmetik-Moda",
     "title": "Maybelline",
-    "description": "Kozmetik · AI Reklam Konsepti",
+    "description": "Maybelline için bağımsız kozmetik reklam konsepti",
     "category": "Moda & Kozmetik",
     "media": [
       {
@@ -220,15 +220,15 @@ window.PORTFOLIO_PROJECTS = [
     "poster": "./posters/Kozmetik-Moda.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Kozmetik-Moda",
     "branch": "43bc17ff4eaa19befe0a5ce2a6a650ccf0a52313",
-    "overview": "Kozmetik alanında, marka iletişimi için hazırlanmış bağımsız reklam konsepti.",
-    "approach": "Ürün odağını renk, ritim ve yakın plan anlatımla desteklemek.",
-    "role": "Kreatif konsept, yapay zekâ destekli görsel / video üretimi",
+    "overview": "Bu çalışma, Maybelline ürün iletişimini yorumlamak amacıyla hazırlanmış bağımsız ve resmî olmayan bir reklam konseptidir. Ürünü merkeze alan dinamik bir anlatımla kozmetik kategorisinin dikkat çekici, enerjik ve görsel açıdan güçlü karakterini yansıtmayı amaçlar.",
+    "approach": "Ürün yakın planları, renk dengesi ve ritmik görsel geçişler yaratıcı yaklaşımın temelini oluşturuyor. Kadrajlar ürünün görünürlüğünü destekleyecek şekilde sadeleştirilirken kampanya enerjisi korunuyor.",
+    "role": "Bağımsız kreatif konsept · Ürün odaklı görsel anlatım · Yapay zekâ destekli video üretimi",
     "disclosure": "Bağımsız portföy konsepti. İlgili marka veya kurumun resmî reklamı ya da onaylı iş birliği değildir."
   },
   {
     "name": "Otomotiv",
     "title": "Continental",
-    "description": "Otomotiv · AI Reklam Konsepti",
+    "description": "Continental için bağımsız otomotiv reklam konsepti",
     "category": "Otomotiv",
     "media": [
       {
@@ -241,15 +241,15 @@ window.PORTFOLIO_PROJECTS = [
     "poster": "./posters/Otomotiv.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Otomotiv",
     "branch": "782093cddbdb117f31b6325f9d8b41c3341e98fa",
-    "overview": "Otomotiv alanına yönelik bağımsız yapay zekâ reklam konsepti.",
-    "approach": "Ürün karakterini ışık, hareket ve sinematik kadrajlarla görünür kılmak.",
-    "role": "Kreatif konsept, yapay zekâ destekli görsel / video üretimi",
+    "overview": "Continental odağındaki bu bağımsız çalışma, lastiği yalnızca teknik bir parça olarak değil, sürüş deneyiminin belirleyici unsurlarından biri olarak ele alan görsel bir reklam yorumudur. Hareket, yol yüzeyi ve ürün karakteri üzerinden güçlü bir otomotiv atmosferi kurulması hedeflenmiştir.",
+    "approach": "Lastik yüzeyi, zemin dokusu ve hareket ilişkisi ön planda tutuldu. Kontrollü ışık ve sinematik kadrajlar, ürün odaklı bir anlatı ile otomotiv reklamlarının dinamizmini bir araya getiriyor.",
+    "role": "Bağımsız kreatif konsept · Otomotiv görsel yönlendirmesi · Yapay zekâ destekli video üretimi",
     "disclosure": "Bağımsız portföy konsepti. İlgili marka veya kurumun resmî reklamı ya da onaylı iş birliği değildir."
   },
   {
     "name": "Spor-Beslenme",
     "title": "OCN Protein",
-    "description": "Sporcu Beslenmesi · AI Reklam Filmi",
+    "description": "OCN Protein için bağımsız ürün odaklı reklam filmi",
     "category": "Spor & Beslenme",
     "media": [
       {
@@ -262,15 +262,15 @@ window.PORTFOLIO_PROJECTS = [
     "poster": "./posters/Spor-Beslenme.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Spor-Beslenme",
     "branch": "aa98ce0767e2bb37b72fc9e1ab58a745c3204bf9",
-    "overview": "Sporcu beslenmesi alanına yönelik bağımsız reklam filmi konsepti.",
-    "approach": "Ürünü günlük kullanım bağlamında net ve dikkat çekici şekilde sunmak.",
-    "role": "Kreatif konsept, yapay zekâ destekli görsel / video üretimi",
+    "overview": "OCN Protein için hazırlanan bu bağımsız konsept, sporcu beslenmesi kategorisini günlük rutin ve ürün deneyimi üzerinden yorumluyor. Amaç, ürünü anlaşılır bir kullanım bağlamına yerleştirirken enerjik ve akılda kalıcı bir reklam dili oluşturmaktır.",
+    "approach": "Ürün odağını kaybetmeyen yakın planlar ve günlük yaşam bağlamı birlikte ele alındı. Tempo, kadraj ve renk kararları sportif dinamizmi destekleyecek şekilde kurgulandı.",
+    "role": "Bağımsız kreatif konsept · Ürün odaklı görsel anlatım · Yapay zekâ destekli video üretimi",
     "disclosure": "Bağımsız portföy konsepti. İlgili marka veya kurumun resmî reklamı ya da onaylı iş birliği değildir."
   },
   {
     "name": "Turizm-Seyahat",
     "title": "Turizm ve Seyahat",
-    "description": "Turizm ve Yolcu Taşımacılığı",
+    "description": "Turizm ve yolcu taşımacılığında deneyim odaklı film",
     "category": "Turizm & Seyahat",
     "media": [
       {
@@ -283,9 +283,9 @@ window.PORTFOLIO_PROJECTS = [
     "poster": "./posters/Turizm-Seyahat.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Turizm-Seyahat",
     "branch": "1f26175de27ad241b5017f77357ad6b4546be70e",
-    "overview": "Turizm ve seyahat alanında hareket ve deneyimi öne çıkaran tanıtım filmi konsepti.",
-    "approach": "Yolculuk hissini ritim ve atmosferle iletmek.",
-    "role": "Kreatif konsept, yapay zekâ destekli görsel / video üretimi",
+    "overview": "Turizm ve Seyahat çalışması, yolcu taşımacılığını bir noktadan diğerine ulaşmanın ötesinde, yolculuk deneyimi olarak ele alan bağımsız bir tanıtım filmidir. Proje; hareket, rota ve atmosferi birleştirerek izleyicide seyahat fikrini canlandırmayı hedefler.",
+    "approach": "Akış hissini güçlendiren görüntü ritmi ve açık kompozisyonlar tercih edildi. Taşımacılık ile destinasyon deneyimi arasındaki bağ, sade ve sinematik bir görsel anlatımla kuruluyor.",
+    "role": "Kreatif konsept · Seyahat odaklı görsel anlatım · Yapay zekâ destekli tanıtım filmi",
     "disclosure": "Bağımsız portföy konsepti. İlgili marka veya kurumun resmî reklamı ya da onaylı iş birliği değildir."
   }
 ];
