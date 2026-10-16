@@ -26,6 +26,13 @@ async def main(args):
    for image in await page.locator('#projectGrid img').all():
     await image.scroll_into_view_if_needed();await image.evaluate('(i)=>i.decode()')
    assert await page.locator('.project').count()==11
+   assert await page.locator('.cover-bg').count()==11
+   assert await page.locator('.cover-fg').count()==11
+   for cover in await page.locator('.cover').all():
+    assert await cover.locator('img').count()==2
+    assert await cover.locator('.cover-bg').evaluate('(e)=>getComputedStyle(e).filter.includes("blur")')
+    assert await cover.locator('.cover-fg').evaluate('(e)=>getComputedStyle(e).objectFit==="contain"')
+
    assert await page.locator('#heroArt img').get_attribute('src')=='./hero-ingiliz-anahtari.png.png'
   await home();projects=await page.evaluate('window.PORTFOLIO_PROJECTS')
   result={'browser':browser.version,'desktop':{'width':1440,'covers':11,'hero':True},'filters':[],'mobile':[],'videos':[],'detail_layouts':0}

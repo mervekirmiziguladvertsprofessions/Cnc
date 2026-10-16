@@ -24,9 +24,12 @@ function renderGrid(){
  const shown=projects.filter(p=>active==="Tüm Projeler"||p.category===active);
  el("projectCount").textContent=shown.length+" proje";
  el("projectGrid").innerHTML=shown.map(p=>{
- const cover={url:p.poster,video:false};
+ const coverUrl=escapeHTML(p.poster);
  return '<a class="project" href="?proje='+encodeURIComponent(p.name)+'">'+
- '<div class="cover">'+(cover?mediaTag(cover,true):'<div class="monogram">MK.</div>')+'</div>'+
+ '<div class="cover">'+
+ '<img class="cover-bg" src="'+coverUrl+'" loading="lazy" alt="" aria-hidden="true">'+
+ '<img class="cover-fg" src="'+coverUrl+'" loading="lazy" alt="'+escapeHTML(p.title)+' kapak görseli">'+
+ '</div>'+
  '<div class="tag">'+escapeHTML(p.category)+'</div>'+
  '<h3>'+escapeHTML(p.title)+' ↗</h3>'+
  '<div class="muted">'+escapeHTML(p.description)+'</div></a>';

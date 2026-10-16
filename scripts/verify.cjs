@@ -9,6 +9,8 @@ function run(search=''){
 const {context,nodes}=run();const projects=context.window.PORTFOLIO_PROJECTS;
 assert.equal(projects.length,11);assert.equal(new Set(projects.map(p=>p.name)).size,11);
 assert.equal((nodes.projectGrid.innerHTML.match(/class="project"/g)||[]).length,11);
+assert.equal((nodes.projectGrid.innerHTML.match(/class="cover-bg"/g)||[]).length,11);
+assert.equal((nodes.projectGrid.innerHTML.match(/class="cover-fg"/g)||[]).length,11);
 for(const p of projects){
  assert(fs.existsSync(path.join(root,'docs',p.poster)));
  assert(p.media.some(m=>m.video));assert(p.overview&&p.approach&&p.role&&p.disclosure);
@@ -24,5 +26,5 @@ assert(projects.every(p=>categories.includes(p.category)));
 vm.runInContext('active="Mobilya & Tasarım";renderGrid()',context);
 assert(nodes.projectGrid.innerHTML.includes('henüz yayımlanmış'));
 assert(!app.includes('fetch('));assert(!data.includes('api.github.com'));
-const html=fs.readFileSync(path.join(root,'docs/index.html'),'utf8');assert(html.includes('hero-ingiliz-anahtari.png.png'));assert(html.includes('object-fit:contain'));
+const html=fs.readFileSync(path.join(root,'docs/index.html'),'utf8');assert(html.includes('hero-ingiliz-anahtari.png.png'));assert(html.includes('object-fit:contain'));assert(html.includes('cover-bg'));assert(html.includes('scrollbar-width:none'));
 console.log('PASS: 11 proje, 11 detay rotası, 9 ana kategori filtresi, bilinmeyen rota, yerel kapaklar, sabit medya adresleri, API bağımsız açılış.');
