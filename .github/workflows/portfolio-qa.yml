@@ -1,0 +1,39 @@
+name: Portfolio QA
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Catalogue and browser checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify catalogue and routes
+        run: node scripts/verify.cjs
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install browser dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Run local browser QA
+        run: |
+          python -m http.server 8000 --directory docs >/tmp/portfolio-http.log 2>&1 &
+          CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')"
+          python scripts/browser-qa.py --chromium "$CHROMIUM" --output /tmp/portfolio-qa
+      - name: Save test evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-browser-qa
+          path: /tmp/portfolio-qa
+          if-no-files-found: ignore
