@@ -3,7 +3,7 @@ window.PORTFOLIO_PROJECTS = [
     "name": "Endustriyel-Perspektif",
     "title": "Endüstri 360",
     "description": "60 Saniyelik Çok Sektörlü Tanıtım Filmi",
-    "category": "Endüstri & Teknoloji",
+    "category": "Sanayi & İmalat",
     "media": [
       {
         "video": true,
@@ -24,7 +24,7 @@ window.PORTFOLIO_PROJECTS = [
     "name": "Cnc",
     "title": "Hassasiyetin Gücü",
     "description": "CNC Teknolojileri · AI Reklam Filmi",
-    "category": "Endüstri & Teknoloji",
+    "category": "Sanayi & İmalat",
     "media": [
       {
         "video": true,
@@ -45,7 +45,7 @@ window.PORTFOLIO_PROJECTS = [
     "name": "Robotik-Otomasyon",
     "title": "Hareketin Mühendisliği",
     "description": "Robotik Otomasyon · AI Reklam Filmi",
-    "category": "Endüstri & Teknoloji",
+    "category": "Sanayi & İmalat",
     "media": [
       {
         "video": true,
@@ -66,7 +66,7 @@ window.PORTFOLIO_PROJECTS = [
     "name": "Is-Makineleri",
     "title": "Sahanın Gücü",
     "description": "İş Makineleri · AI Reklam Filmi",
-    "category": "Endüstri & Teknoloji",
+    "category": "Yapı & İnşaat",
     "media": [
       {
         "video": true,
@@ -105,7 +105,7 @@ window.PORTFOLIO_PROJECTS = [
     "name": "Plastik-Teknolojileri-Formun-Otesinde",
     "title": "Formun Ötesinde",
     "description": "Plastik Teknolojileri · AI Reklam Filmi",
-    "category": "Endüstri & Teknoloji",
+    "category": "Sanayi & İmalat",
     "media": [
       {
         "video": false,
@@ -150,7 +150,7 @@ window.PORTFOLIO_PROJECTS = [
     "name": "Lojistik",
     "title": "Lojistik",
     "description": "Lojistik ve Taşımacılık · AI Reklam Filmi",
-    "category": "Otomotiv & Lojistik",
+    "category": "Lojistik",
     "media": [
       {
         "video": false,
@@ -187,7 +187,7 @@ window.PORTFOLIO_PROJECTS = [
     "name": "Gayrimenkul",
     "title": "Gayrimenkul",
     "description": "Gayrimenkul · AI Reklam Filmi",
-    "category": "Gayrimenkul & Seyahat",
+    "category": "Gayrimenkul",
     "media": [
       {
         "video": true,
@@ -208,7 +208,7 @@ window.PORTFOLIO_PROJECTS = [
     "name": "Kozmetik-Moda",
     "title": "Maybelline",
     "description": "Kozmetik · AI Reklam Konsepti",
-    "category": "Marka & Ürün",
+    "category": "Moda & Kozmetik",
     "media": [
       {
         "video": true,
@@ -229,7 +229,7 @@ window.PORTFOLIO_PROJECTS = [
     "name": "Otomotiv",
     "title": "Continental",
     "description": "Otomotiv · AI Reklam Konsepti",
-    "category": "Otomotiv & Lojistik",
+    "category": "Otomotiv",
     "media": [
       {
         "video": true,
@@ -250,7 +250,7 @@ window.PORTFOLIO_PROJECTS = [
     "name": "Spor-Beslenme",
     "title": "OCN Protein",
     "description": "Sporcu Beslenmesi · AI Reklam Filmi",
-    "category": "Marka & Ürün",
+    "category": "Spor & Beslenme",
     "media": [
       {
         "video": true,
@@ -271,7 +271,7 @@ window.PORTFOLIO_PROJECTS = [
     "name": "Turizm-Seyahat",
     "title": "Turizm ve Seyahat",
     "description": "Turizm ve Yolcu Taşımacılığı",
-    "category": "Gayrimenkul & Seyahat",
+    "category": "Turizm & Seyahat",
     "media": [
       {
         "video": true,
