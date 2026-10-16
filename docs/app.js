@@ -1,6 +1,6 @@
 "use strict";
 const projects=window.PORTFOLIO_PROJECTS;
-const CATS=["Endüstri & Teknoloji","Otomotiv & Lojistik","Marka & Ürün","Gayrimenkul & Seyahat"];
+const CATS=["Sanayi & İmalat","Yapı & İnşaat","Gayrimenkul","Lojistik","Otomotiv","Mobilya & Tasarım","Moda & Kozmetik","Turizm & Seyahat","Spor & Beslenme"];
 let active="Tüm Projeler";
 const el=id=>document.getElementById(id);
 const escapeHTML=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -10,7 +10,7 @@ function mediaTag(m,preview=false,poster=""){
  return '<img src="'+url+'" loading="lazy" alt="Proje görseli">';
 }
 function renderFilters(){
- let cats=["Tüm Projeler",...CATS.filter(c=>projects.some(p=>p.category===c))];
+ let cats=["Tüm Projeler",...CATS];
  el("filters").innerHTML=cats.map(c=>
  '<button type="button" class="'+(active===c?"active":"")+
  '" aria-pressed="'+(active===c)+'" data-cat="'+escapeHTML(c)+'">'+escapeHTML(c)+'</button>').join("");
@@ -30,7 +30,7 @@ function renderGrid(){
  '<div class="tag">'+escapeHTML(p.category)+'</div>'+
  '<h3>'+escapeHTML(p.title)+' ↗</h3>'+
  '<div class="muted">'+escapeHTML(p.description)+'</div></a>';
- }).join("")||'<p class="muted">Bu kategoride proje bulunamadı.</p>';
+ }).join("")||'<p class="muted">Bu kategoride henüz yayımlanmış bir çalışma bulunmuyor.</p>';
 }
 
 function detailPage(p){
