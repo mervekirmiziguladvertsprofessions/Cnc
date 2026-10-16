@@ -19,7 +19,7 @@ vm.runInContext('active="Sanayi & İmalat";renderGrid()',context);assert.equal((
 assert(run('?proje=olmayan').nodes.detailBody.innerHTML.includes('Proje bulunamadı'));
 const categories=["Sanayi & İmalat","Yapı & İnşaat","Gayrimenkul","Lojistik","Otomotiv","Mobilya & Tasarım","Moda & Kozmetik","Turizm & Seyahat","Spor & Beslenme"];
 assert.equal(new Set(projects.map(p=>p.category)).size,8);
-assert(categories.every(c=>nodes.filters.innerHTML.includes(c)));
+assert(categories.every(c=>nodes.filters.innerHTML.replaceAll('&amp;', '&').includes(c)));
 assert(projects.every(p=>categories.includes(p.category)));
 vm.runInContext('active="Mobilya & Tasarım";renderGrid()',context);
 assert(nodes.projectGrid.innerHTML.includes('henüz yayımlanmış'));
