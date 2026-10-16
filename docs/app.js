@@ -1,6 +1,6 @@
 "use strict";
 const projects=window.PORTFOLIO_PROJECTS;
-const CATS=["Portföy Tanıtımı","Sanayi & İmalat","Yapı & İnşaat","Gayrimenkul","Lojistik","Otomotiv","Mobilya & Tasarım","Moda & Kozmetik","Turizm & Seyahat","Spor & Beslenme"];
+const CATS=["Endüstri & Teknoloji","Otomotiv & Lojistik","Marka & Ürün","Gayrimenkul & Seyahat"];
 let active="Tüm Projeler";
 const el=id=>document.getElementById(id);
 const escapeHTML=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -11,7 +11,6 @@ function mediaTag(m,preview=false,poster=""){
 }
 function renderFilters(){
  let cats=["Tüm Projeler",...CATS.filter(c=>projects.some(p=>p.category===c))];
- if(projects.some(p=>p.category==="Diğer Projeler"))cats.push("Diğer Projeler");
  el("filters").innerHTML=cats.map(c=>
  '<button type="button" class="'+(active===c?"active":"")+
  '" aria-pressed="'+(active===c)+'" data-cat="'+escapeHTML(c)+'">'+escapeHTML(c)+'</button>').join("");
@@ -37,11 +36,15 @@ function renderGrid(){
 function detailPage(p){
  el("homepage").hidden=true;el("detail").hidden=false;
  document.title=p.title+" | Merve Kırmızıgül";
- el("detailBody").innerHTML='<div class="small">'+escapeHTML(p.category)+'</div><h1>'+escapeHTML(p.title)+'</h1><p class="muted">'+escapeHTML(p.description)+'</p><div class="detail-media">'+p.media.map(m=>mediaTag(m,false,p.poster)).join("")+'</div><p><a class="btn" target="_blank" rel="noopener noreferrer" href="'+escapeHTML(p.github)+'">Proje Dosyaları ↗</a></p>';
+ const field=(label,value)=>'<div><div class="small">'+escapeHTML(label)+'</div><p>'+escapeHTML(value)+'</p></div>';
+ const details='<div class="case-panel">'+field("PROJE HAKKINDA",p.overview||p.description)+field("YARATICI YAKLAŞIM",p.approach||"Yapay zekâ destekli görsel anlatım.")+field("ÇALIŞMA KAPSAMI",p.role||"Kreatif konsept ve görsel üretim")+'</div>';
+ const note=p.disclosure?'<p class="case-disclosure">'+escapeHTML(p.disclosure)+'</p>':'';
+ el("detailBody").innerHTML='<div class="small">'+escapeHTML(p.category)+'</div><h1>'+escapeHTML(p.title)+'</h1><p class="muted">'+escapeHTML(p.description)+'</p>'+details+'<h2>Film ve görseller</h2><div class="detail-media">'+p.media.map(m=>mediaTag(m,false,p.poster)).join("")+'</div>'+note+'<p><a class="btn" target="_blank" rel="noopener noreferrer" href="'+escapeHTML(p.github)+'">GitHub proje dosyaları ↗</a></p>';
  el("detailBody").querySelectorAll("video").forEach(v=>v.addEventListener("error",()=>{
- const message=document.createElement("p");message.className="muted";message.textContent="Video yüklenemedi. Proje Dosyaları bağlantısından filme ulaşabilirsiniz.";v.after(message);
+  const message=document.createElement("p");message.className="muted";message.textContent="Video yüklenemedi. GitHub proje dosyaları bağlantısından filme ulaşabilirsiniz.";v.after(message);
  },{once:true}));
 }
+
 el("year").textContent=new Date().getFullYear();
 renderFilters();renderGrid();
 const requested=new URLSearchParams(location.search).get("proje");
