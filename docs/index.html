@@ -52,9 +52,27 @@ nav{min-height:75px;display:flex;align-items:center;justify-content:space-betwee
 .service{background:var(--card);border:1px solid #34433c;border-radius:10px;padding:27px}
 .service h3{margin:10px 0}
 .service p{color:var(--gray);font-size:14px}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
-.about-art{border-radius:12px;min-height:300px;background:var(--card);display:grid;place-items:center;font:800 100px Sora;color:var(--lime)}
-.about p{color:var(--gray)}
+/* Creative philosophy — scoped to the About section */
+#hakkimda{background:#121718;color:#EFF1E9}
+.about-editorial{border-top:1px solid #43504b;padding-top:40px;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);column-gap:clamp(40px,7vw,100px);row-gap:56px;align-items:start}
+.about-heading{min-width:0}
+.about-eyebrow{margin:0 0 32px;font-size:11px;font-weight:600;letter-spacing:.16em;color:var(--gray)}
+.about-title{font-size:clamp(52px,6.5vw,84px);line-height:1.06;font-weight:500;margin:0 0 32px;letter-spacing:-.055em}
+.about-title span{display:block;color:#C3E561}
+.about-expertise{max-width:340px;margin:0;font-size:11px;line-height:2.1;letter-spacing:.12em;font-weight:600;color:var(--gray)}
+.about-copy{min-width:0;font-family:Inter,Arial,sans-serif;font-size:16px;line-height:1.9;color:#AAB6B2}
+.about-copy p{margin:0 0 24px}
+.about-copy .about-lead{font-size:clamp(19px,1.8vw,23px);line-height:1.65;color:#EFF1E9;margin-bottom:32px}
+.about-copy .about-closing{margin:36px 0 0;padding:0 0 0 22px;border-left:2px solid #C3E561;color:#EFF1E9;font-size:clamp(20px,1.9vw,25px);line-height:1.65}
+.about-footer{grid-column:1/-1;border-top:1px solid #35413e;padding-top:28px;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);column-gap:clamp(40px,7vw,100px);row-gap:28px}
+.about-tags{display:flex;flex-wrap:wrap;align-content:start;gap:10px 20px;list-style:none;padding:0;margin:0;color:#C3E561;font-size:10px;font-weight:600;letter-spacing:.12em}
+.about-signature p{margin:0}
+.about-signature .about-motto{font-size:15px;line-height:1.8;color:#EFF1E9;margin-bottom:12px}
+.about-byline{font-size:12px;line-height:1.8;color:var(--gray)}
+.about-explore{display:inline-flex;align-items:center;justify-content:space-between;gap:28px;min-height:48px;border-bottom:1px solid #C3E561;margin-top:24px;color:#EFF1E9;font-size:14px;font-weight:600}
+.about-explore:hover{color:#C3E561}
+@media(max-width:900px){.about-editorial,.about-footer{grid-template-columns:1fr}.about-editorial{row-gap:36px}.about-expertise{max-width:100%}.about-title{font-size:clamp(48px,9vw,72px)}.about-footer{row-gap:24px}}
+@media(max-width:480px){.about-editorial{padding-top:28px}.about-eyebrow{font-size:10px;letter-spacing:.1em;margin-bottom:24px}.about-copy{font-size:15px;line-height:1.85}.about-title{margin-bottom:24px}.about-copy .about-closing{padding-left:16px}.about-tags{gap:10px 16px;font-size:9px}}
 details{border-bottom:1px solid #36433e;padding:20px 0}
 summary{cursor:pointer;font-weight:600;list-style:none;display:flex;align-items:center;gap:16px}
 summary::-webkit-details-marker{display:none}
@@ -74,7 +92,7 @@ footer{border-top:1px solid #35413e;padding:25px 0;color:var(--gray);font-size:1
 @media(max-width:760px){
 nav{flex-direction:column;align-items:flex-start;padding:16px 0}
 .links{gap:12px}
-.hero,.about,.grid,.services,.detail-media{grid-template-columns:1fr}
+.hero,.grid,.services,.detail-media{grid-template-columns:1fr}
 .hero{padding-top:40px;min-height:auto}
 .hero-art{min-height:230px}
 .section{padding-top:58px;padding-bottom:58px}
@@ -165,14 +183,28 @@ nav{flex-direction:column;align-items:flex-start;padding:16px 0}
 </div>
 </section>
 
-<section class="section container" id="hakkimda">
-<div class="about">
-<div class="about-art">MK.</div>
-<div>
-<div class="small">03 / ABOUT</div>
-<h2>Merve <span class="lime">Kırmızıgül.</span></h2>
-<p>Hacettepe Üniversitesi Uluslararası İlişkiler (İngilizce) mezunuyum. Reklamcılık ve propaganda alanındaki eğitimlerimle geliştirdiğim stratejik bakış açısını, yapay zekâ destekli reklam üretimiyle birleştiriyorum.</p>
-<p>Reklam benim için yalnızca görsel üretmek değil; markanın ihtiyaçlarını anlayıp doğru yaratıcı yaklaşımı geliştirmek.</p>
+<section class="section container" id="hakkimda" aria-labelledby="about-title">
+<div class="about-editorial">
+<div class="about-heading">
+<p class="about-eyebrow">ABOUT / CREATIVE PHILOSOPHY</p>
+<h2 class="about-title" id="about-title">Fikirden <span>etkiye.</span></h2>
+<p class="about-expertise">CREATIVE DIRECTION · AI ADVERTISING · VISUAL STORYTELLING</p>
+</div>
+<div class="about-copy">
+<p class="about-lead">Güçlü bir marka iletişimi, yalnızca dikkat çekici görsellerle değil; doğru strateji, özgün bir yaratıcı yaklaşım ve tutarlı bir anlatımla şekillenir.</p>
+<p>Çalışmalarımın merkezinde, markaların karakterini ve ürünlerin değerini güçlü reklam fikirlerine dönüştürmek yer alıyor.</p>
+<p>Yaratıcı yönetim, yapay zekâ destekli görsel üretim ve sinematik anlatım tekniklerini bir araya getirerek farklı sektörler için özgün reklam konseptleri geliştiriyorum.</p>
+<p>Endüstriyel üretimden otomotive, gayrimenkulden tüketici markalarına uzanan projelerde her çalışmayı kendi hedefleri, kitlesi ve görsel kimliği doğrultusunda ele alıyorum.</p>
+<p>Teknolojiyi yalnızca üretimi hızlandıran bir araç olarak değil, yaratıcı olasılıkları genişleten stratejik bir yetkinlik olarak değerlendiriyorum.</p>
+<p class="about-closing">Hedefim yalnızca görünürlük sağlamak değil; markaların zihinde güçlü, ayırt edilebilir ve kalıcı bir yer edinmesine katkıda bulunmak.</p>
+</div>
+<div class="about-footer">
+<ul class="about-tags" aria-label="Çalışma alanları"><li>STRATEGY</li><li>CREATIVE DIRECTION</li><li>AI PRODUCTION</li></ul>
+<div class="about-signature">
+<p class="about-motto">Stratejik bakış. Özgün yaratıcı yön. Etkili görsel iletişim.</p>
+<p class="about-byline">Merve Kırmızıgül — Creative Direction &amp; AI Advertising</p>
+<a class="about-explore" href="#projeler">Projeleri Keşfet <span aria-hidden="true">↗</span></a>
+</div>
 </div>
 </div>
 </section>
@@ -213,3 +245,4 @@ nav{flex-direction:column;align-items:flex-start;padding:16px 0}
 <script src="./app.js" defer></script>
 </body>
 </html>
+
