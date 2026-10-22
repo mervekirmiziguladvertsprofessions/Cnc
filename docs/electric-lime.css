@@ -1,0 +1,245 @@
+/*
+ ROSS / MK Portfolio · Electric Lime editorial redesign
+ Layered over the existing site stylesheet to preserve all existing pages and functionality.
+ */
+:root{
+ --bg:#131C18;--card:#26342A;--lime:#CBF36C;--white:#F5F8EC;--gray:#B9C5BA;
+ --ink:#17221B;--cream:#EDF2E7;--mint:#DDE8D5;--deep:#14231A;
+}
+body{background:var(--bg);color:var(--white)}
+::selection{background:var(--lime);color:var(--ink)}
+.container{max-width:1280px}
+.section{padding-top:110px;padding-bottom:110px}
+h1,h2,h3{letter-spacing:-.05em}
+h2{font-size:clamp(2.6rem,5.6vw,5.6rem);line-height:1.04}
+.small{letter-spacing:.17em}
+header{background:rgba(15,23,19,.92);border-bottom:1px solid rgba(201,245,111,.18)}
+nav{min-height:79px}
+.logo{font-size:16px;letter-spacing:-.035em}
+.logo .lime{font-size:24px}
+.links a{font-size:11px;font-weight:700;letter-spacing:.075em;transition:color .2s}
+.links a:hover{color:var(--lime)}
+.btn{border-radius:100px;transition:transform .25s,background .25s,color .25s,border-color .25s}
+.btn:hover{transform:translateY(-3px);opacity:1}
+.btn.primary{border-color:var(--ink);background:var(--ink);color:var(--lime)}
+.btn.primary:hover{background:#314333;color:#fff}
+
+/* 01 — A vivid, full-bleed acid-lime opening, not a charcoal block. */
+.hero{
+ position:relative;max-width:none;min-height:min(780px,88vh);
+ padding-top:100px;padding-bottom:100px;
+ padding-left:max(24px,calc((100vw - 1280px)/2 + 24px));
+ padding-right:max(24px,calc((100vw - 1280px)/2 + 24px));
+ grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);
+ gap:clamp(36px,5vw,85px);overflow:hidden;
+ background:var(--lime);color:var(--ink);
+}
+.hero:before{
+ content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;
+ background-image:radial-gradient(#54734b 0.6px,transparent 0.6px);
+ background-size:22px 22px;mask-image:linear-gradient(to right,transparent 15%,#000);
+}
+.hero>div{position:relative;z-index:1;min-width:0}
+.hero .small{color:#274830;font-weight:800;letter-spacing:.21em}
+.hero h1{
+ font-size:clamp(3.5rem,6.8vw,7.8rem);
+ line-height:.96;letter-spacing:-.079em;
+ margin:33px 0 28px;
+ max-width:940px;
+}
+.hero h1 .lime{color:#356548;position:relative}
+.hero h1 .lime:after{
+ content:"";height:7px;border-radius:12px;background:#356548;
+ position:absolute;left:0;right:12%;bottom:-13px;transform:rotate(-2deg)
+}
+.hero p{max-width:560px;color:#294437;font-size:clamp(1rem,1.45vw,1.18rem);line-height:1.85}
+.hero .buttons{gap:14px;margin-top:36px}
+.hero .buttons .btn:not(.primary){color:#1B2C20;border-color:#64875B;background:rgba(255,255,255,.19)}
+.hero-art{
+ position:relative;overflow:hidden;isolation:isolate;min-height:360px;height:min(35vw,520px);
+ border:10px solid #15231C;border-radius:23px;background:#213327;
+ box-shadow:18px 18px 0 rgba(16,34,21,.14),0 24px 70px #355d3230;
+ transform:rotate(2deg);
+ transition:transform .5s ease,box-shadow .5s;
+}
+.hero-art:hover{transform:rotate(0deg) translateY(-6px);box-shadow:0 30px 70px #355d3245}
+.hero-art img{width:100%;height:100%;max-height:none;object-fit:contain}
+.hero-art:after{
+ content:"CREATIVE PRODUCTION  /  2026";
+ position:absolute;left:15px;bottom:15px;background:var(--lime);color:var(--ink);
+ padding:8px 12px;border-radius:3px;font:700 10px Inter,sans-serif;letter-spacing:.09em;
+}
+
+/* Fast visual rhythm after the hero */
+.ticker{background:var(--ink);color:var(--lime);overflow:hidden;border-block:1px solid #5F8550}
+.ticker-track{display:flex;width:max-content;gap:48px;white-space:nowrap;
+ padding:15px 0;font:800 clamp(12px,1.1vw,16px) Sora,sans-serif;letter-spacing:.17em;
+ animation:rossTicker 36s linear infinite}
+.ticker-track span{display:inline-flex;align-items:center;gap:48px}
+.ticker-track span:after{content:"✳";font-size:19px}
+@keyframes rossTicker{to{transform:translateX(-50%)}}
+
+/* 02 — Bright editorial project gallery, asymmetrical instead of repetitive cards. */
+#projeler{
+ background:var(--cream);color:var(--ink);max-width:none;
+ padding-left:max(24px,calc((100vw - 1280px)/2 + 24px));
+ padding-right:max(24px,calc((100vw - 1280px)/2 + 24px));
+}
+#projeler .small{color:#456534}
+#projeler>h2{max-width:1000px;margin:22px 0}
+#projeler h2 .lime{color:#4C883E}
+#projeler>.muted{color:#5A6C5A;max-width:710px;font-size:16px}
+#projeler .filters{margin-top:42px;gap:10px;padding-bottom:30px}
+#projeler .filters button{
+ background:transparent;color:#223128;border:1px solid #A3B5A0;
+ font-weight:600;font-size:12px;padding:12px 18px;transition:.2s;
+}
+#projeler .filters button:hover,#projeler .filters button.active{
+ border-color:#263A26;background:var(--lime);color:#19241D;
+}
+#projeler #projectCount{font-size:12px;letter-spacing:.13em;color:#607462;margin:0 0 22px;text-transform:uppercase}
+#projectGrid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:42px 25px;align-items:start}
+#projectGrid .project{grid-column:span 6;border-bottom:0;padding-bottom:0;display:block;min-width:0}
+#projectGrid .project.layout-wide{grid-column:span 8}
+#projectGrid .project.layout-narrow{grid-column:span 4}
+#projectGrid .project.layout-balanced{grid-column:span 6}
+#projectGrid .project .cover{
+ aspect-ratio:15/10;border:0;border-radius:14px;overflow:hidden;
+ background:#22362D;box-shadow:0 12px 28px #192B2116;transition:transform .45s ease,box-shadow .45s ease;
+}
+#projectGrid .project.layout-wide .cover{aspect-ratio:16/9}
+#projectGrid .project.layout-narrow .cover{aspect-ratio:4/5}
+#projectGrid .project:hover .cover{transform:translateY(-7px);box-shadow:0 22px 42px #192B2133}
+#projectGrid .project .cover-bg{filter:blur(25px) brightness(.60) saturate(1.2)}
+#projectGrid .project .cover-fg{object-fit:contain;transition:transform .65s ease}
+#projectGrid .project:hover .cover-fg{transform:scale(1.035)}
+#projectGrid .project .cover:after{
+ content:"↗";position:absolute;z-index:3;right:18px;top:18px;
+ width:46px;height:46px;display:grid;place-items:center;
+ border-radius:50%;background:var(--lime);color:#1D2A20;
+ font-size:25px;transform:translateY(-8px);opacity:0;transition:opacity .22s,transform .22s;
+}
+#projectGrid .project:hover .cover:after,#projectGrid .project:focus-visible .cover:after{opacity:1;transform:translateY(0)}
+#projectGrid .project-meta{display:flex;justify-content:space-between;gap:14px;align-items:center;margin-top:21px}
+#projectGrid .project-meta .tag{color:#3D7C42;margin-top:0;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.13em}
+#projectGrid .project-index{color:#7B907E;font:700 12px Sora,sans-serif}
+#projectGrid .project h3{color:#15281D;font-size:clamp(23px,2.4vw,33px);margin:11px 0 5px;line-height:1.14}
+#projectGrid .project:hover h3{color:#3E713B}
+#projectGrid .project .muted{font-size:13px;color:#667669;line-height:1.7}
+#projectGrid .work-break{
+ grid-column:1/-1;min-height:200px;display:flex;align-items:center;justify-content:space-between;
+ gap:25px;padding:38px clamp(26px,4vw,70px);background:#D1F783;color:#213225;
+ border:1px solid #B9E067;border-radius:15px;
+}
+#projectGrid .work-break strong{font:700 clamp(24px,3vw,45px)/1.15 Sora,sans-serif;letter-spacing:-.055em}
+#projectGrid .work-break .work-break-mark{font:800 clamp(80px,11vw,145px)/.8 Sora;color:#A1CD56;letter-spacing:-.13em;user-select:none}
+
+/* 03 — Four service panels with contrast, not four copies of one gray card */
+#hizmetler{background:#17251D;color:#F5F9EE}
+#hizmetler>h2{max-width:980px}
+#hizmetler h2 .lime{color:var(--lime)}
+#hizmetler .services{grid-template-columns:repeat(12,minmax(0,1fr));gap:18px;margin-top:54px}
+#hizmetler .service{
+ grid-column:span 6;min-height:245px;border-radius:16px;
+ padding:clamp(28px,3vw,44px);border:1px solid #455848;
+ background:#24352A;transition:transform .3s ease;
+}
+#hizmetler .service:nth-child(1){background:var(--lime);color:#1B301F;border-color:var(--lime)}
+#hizmetler .service:nth-child(3){background:#E5ECD9;color:#1B301F;border-color:#E5ECD9}
+#hizmetler .service:nth-child(1) .small,#hizmetler .service:nth-child(3) .small{color:#416D39}
+#hizmetler .service:nth-child(1) p,#hizmetler .service:nth-child(3) p{color:#3E5842}
+#hizmetler .service:hover{transform:translateY(-5px)}
+#hizmetler .service h3{font-size:clamp(24px,2.7vw,34px);letter-spacing:-.045em}
+#hizmetler .service p{font-size:15px;line-height:1.8;max-width:450px}
+
+/* 04 — A warm mint editorial pause after the portfolio */
+#hakkimda{
+ max-width:none;background:#DBE8D2;color:#17291D;
+ padding-left:max(24px,calc((100vw - 1280px)/2 + 24px));
+ padding-right:max(24px,calc((100vw - 1280px)/2 + 24px));
+}
+#hakkimda .about-editorial{border-color:#8EA991}
+#hakkimda .about-eyebrow,#hakkimda .about-expertise{color:#52705C}
+#hakkimda .about-title{font-size:clamp(65px,8vw,115px);line-height:.97}
+#hakkimda .about-title span{color:#518B48}
+#hakkimda .about-copy{color:#415C48}
+#hakkimda .about-copy .about-lead,#hakkimda .about-copy .about-closing{color:#17291D}
+#hakkimda .about-copy .about-closing{border-color:#4C8D46}
+#hakkimda .about-footer{border-color:#8EA991}
+#hakkimda .about-tags{color:#3F7F42}
+#hakkimda .about-signature .about-motto{color:#17291D}
+#hakkimda .about-byline{color:#52705C}
+#hakkimda .about-explore{border-color:#4C8D46;color:#17291D}
+#hakkimda .about-explore:hover{color:#427C3C}
+
+/* 05 — A typographic FAQ and an unmistakable green closing CTA */
+#sss{background:#152219;color:#F5F8EE}
+#sss details{padding:24px 0;border-color:#405447}
+#sss summary{font-size:clamp(16px,1.7vw,20px)}
+#sss details p{color:#B5C8B9}
+#iletisim{background:#152219;padding-top:20px}
+#iletisim .contact{
+ border:0;border-radius:22px;background:var(--lime);color:#16251B;
+ padding:clamp(28px,5vw,85px);
+}
+#iletisim .contact>.small{color:#3F6E37}
+#iletisim .contact h2{font-size:clamp(3rem,5.5vw,6rem);line-height:1.05;max-width:1050px}
+#iletisim .contact h2 .lime{color:#437B42}
+#iletisim .contact>.muted{color:#3D593E;font-size:16px}
+#iletisim .contact-row{border-color:#A3D158;color:#1A3020;transition:padding .2s}
+#iletisim .contact-row:hover{padding-left:6px}
+#iletisim .icon{background:#243A28;color:var(--lime)}
+#iletisim .contact-row .lime{color:#376A38}
+#iletisim .btn.primary{margin-top:24px}
+footer{background:#101913;border-color:#374B3B;color:#AABDAD}
+
+/* Detail views preserve all current project videos, image fitting and descriptions */
+#detail{background:#131C18;color:#F5F8EC;min-height:65vh}
+#detail .case-panel{border-color:#465B49}
+#detail .case-panel p,#detail .project-text{color:#B8C8B9}
+#detail .back{display:inline-flex;align-items:center;gap:8px;color:var(--lime)}
+#detail .detail-media video,#detail .detail-media img{background:#0D1510}
+#detail .btn{border-color:#B5C29A}
+
+/* Breakpoints: deliberate mobile composition and no horizontal overflow. */
+@media(max-width:1000px){
+ .hero{min-height:610px;gap:32px}
+ .hero h1{font-size:clamp(3.3rem,6.5vw,6rem)}
+ #projectGrid{gap:35px 18px}
+}
+@media(max-width:760px){
+ .section{padding-top:76px;padding-bottom:76px}
+ nav{gap:10px}
+ .hero{padding-top:62px;padding-bottom:75px;min-height:auto;grid-template-columns:1fr;gap:44px}
+ .hero h1{font-size:clamp(3.1rem,11.5vw,5.5rem);margin:28px 0}
+ .hero-art{height:clamp(230px,60vw,430px);width:100%;max-width:600px;margin:0 auto;transform:rotate(1deg)}
+ .hero-art:hover{transform:rotate(0)}
+ #projeler{padding-top:76px;padding-bottom:90px}
+ #projeler .filters{margin-top:30px}
+ #projectGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 16px}
+ #projectGrid .project,#projectGrid .project.layout-wide,#projectGrid .project.layout-narrow,#projectGrid .project.layout-balanced{grid-column:span 2}
+ #projectGrid .project .cover,#projectGrid .project.layout-wide .cover,#projectGrid .project.layout-narrow .cover{aspect-ratio:16/10}
+ #projectGrid .work-break{min-height:165px;padding:28px}
+ #projectGrid .work-break-mark{display:none}
+ #hizmetler .services{grid-template-columns:1fr}
+ #hizmetler .service{grid-column:auto;min-height:auto}
+ #hakkimda .about-title{font-size:clamp(52px,12vw,90px)}
+ #iletisim .contact{border-radius:13px}
+}
+@media(max-width:480px){
+ .logo{font-size:13px}
+ .links{gap:10px;font-size:11px}
+ .links a{font-size:10px}
+ .hero h1{font-size:clamp(2.9rem,12vw,4.3rem)}
+ .hero p{font-size:15px}
+ .hero-art{height:245px;border-width:6px}
+ .hero-art:after{font-size:8px;padding:6px 8px}
+ #projeler .filters button{padding:10px 13px}
+ #projectGrid .project h3{font-size:26px}
+ #projectGrid .work-break strong{font-size:24px}
+ #iletisim .contact h2{font-size:clamp(2.5rem,11vw,4rem)}
+}
+@media(prefers-reduced-motion:reduce){
+ .ticker-track{animation:none}
+ .hero-art,#projectGrid .project .cover,#projectGrid .project .cover-fg,#hizmetler .service{transition:none}
+}
