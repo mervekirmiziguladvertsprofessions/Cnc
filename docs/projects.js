@@ -12,7 +12,7 @@ window.PORTFOLIO_PROJECTS = [
         "height": 478
       }
     ],
-    "poster": "./posters/Endustriyel-Perspektif.jpg",
+    "poster": "./posters/approved-2026-10-23/01_Endustri_360.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Endustriyel-Perspektif",
     "branch": "f6baeac6869be09c4b000911c00ec92d72598713",
     "overview": "Endüstri 360, farklı üretim disiplinlerini tek bir anlatıda buluşturan bağımsız bir portföy filmidir. Amaç, makineleri yalnızca göstermek değil; üretim dünyasının ölçeğini, çeşitliliğini ve sürekliliğini güçlü bir marka anlatısına dönüştürmektir.",
@@ -33,7 +33,7 @@ window.PORTFOLIO_PROJECTS = [
         "height": 1920
       }
     ],
-    "poster": "./posters/Cnc.jpg",
+    "poster": "./posters/approved-2026-10-23/02_Hassasiyetin_Gucu_CNC.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Cnc",
     "branch": "19aa1c165ae0b8bbb7a7d9cb974f1a9c8e8f9591",
     "overview": "Hassasiyetin Gücü, CNC üretiminin teknik karakterini sinematik bir iletişim diline taşıyan bağımsız bir reklam çalışmasıdır. Proje, işleme teknolojisinin merkezindeki kontrol ve milimetrik doğruluk fikrini görsel bir marka değerine dönüştürmeyi hedefler.",
@@ -54,7 +54,7 @@ window.PORTFOLIO_PROJECTS = [
         "height": 1280
       }
     ],
-    "poster": "./posters/Robotik-Otomasyon.jpg",
+    "poster": "./posters/approved-2026-10-23/03_Hareketin_Muhendisligi_Robotik.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Robotik-Otomasyon",
     "branch": "95ac0cff25705030a992e636acf28c515e40bbe6",
     "overview": "Hareketin Mühendisliği, robotik otomasyonun işleyişini teknoloji odaklı bir reklam diliyle yorumlayan bağımsız bir konsepttir. Odak noktası, karmaşık sistemleri teknik bir katalog gibi sunmak yerine hareket, koordinasyon ve hassasiyet üzerinden anlaşılır kılmaktır.",
@@ -93,7 +93,7 @@ window.PORTFOLIO_PROJECTS = [
         "url": "https://raw.githubusercontent.com/mervekirmiziguladvertsprofessions/Is-Makineleri/167a6fa27444badb29b2c714da8f0ec7239e67a8/%C4%B0%C5%9F%20Makinesi%20%20deniz.png"
       }
     ],
-    "poster": "./posters/Is-Makineleri-creative-1080.jpg",
+    "poster": "./posters/approved-2026-10-23/04_Sahanin_Gucu_Is_Makineleri.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Is-Makineleri",
     "branch": "ac7514c77543106f148453b1c2023475495b23ef",
     "overview": "Sahanın Gücü, iş makinelerinin endüstriyel kimliğini ve çalışma ortamındaki etkisini ön plana çıkaran bağımsız bir reklam konseptidir. Proje, teknik ürün iletişiminde gücü yalnızca iddia etmek yerine ölçek, hareket ve çevre ilişkisiyle hissettirmeyi amaçlar.",
@@ -138,7 +138,7 @@ window.PORTFOLIO_PROJECTS = [
         "height": 850
       }
     ],
-    "poster": "./posters/Plastik-Teknolojileri-Formun-Otesinde.jpg",
+    "poster": "./posters/approved-2026-10-23/05_Formun_Otesinde_Plastik.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Plastik-Teknolojileri-Formun-Otesinde",
     "branch": "cf6c4d588724eadf6ea58c55e912106dd88df39b",
     "overview": "Formun Ötesinde, plastik teknolojilerinin tasarım ve üretim potansiyelini merkeze alan bağımsız bir görsel kampanya konseptidir. Proje, malzemeyi yalnızca ham madde olarak değil; biçime, işleve ve ürün kimliğine dönüşen bir tasarım unsuru olarak ele alır.",
@@ -159,7 +159,7 @@ window.PORTFOLIO_PROJECTS = [
         "height": 1080
       }
     ],
-    "poster": "./posters/Yeraltindan-Cevhere-creative-1080.jpg",
+    "poster": "./posters/approved-2026-10-23/06_Yeraltindan_Cevhere_Maden.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Madencilik",
     "branch": "2fe48dc0d3fdfda9b9f5ad75ef3817f0bc206e73",
     "overview": "Madencilik sektörüne yönelik bağımsız reklam filmi.",
@@ -196,7 +196,7 @@ window.PORTFOLIO_PROJECTS = [
         "height": 1280
       }
     ],
-    "poster": "./posters/Lojistik.jpg",
+    "poster": "./posters/approved-2026-10-23/07_Lojistik.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Lojistik",
     "branch": "784c9c9e07ea3e2acfae95c13cc2c2878427ffd0",
     "overview": "Bu çalışma, lojistiği tek bir taşıma aracından daha geniş bir sistem olarak yorumlayan bağımsız bir portföy konseptidir. Hareket, koordinasyon ve teslimat zincirindeki süreklilik; sektöre yönelik güçlü ve anlaşılır bir tanıtım dili oluşturmak için temel alınmıştır.",
@@ -217,7 +217,7 @@ window.PORTFOLIO_PROJECTS = [
         "height": 478
       }
     ],
-    "poster": "./posters/Gayrimenkul.jpg",
+    "poster": "./posters/approved-2026-10-23/08_Gayrimenkul.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Gayrimenkul",
     "branch": "206e92c1e92a4409ff662d4e17ca408eeccd96c4",
     "overview": "Gayrimenkul konsepti, bir yaşam alanının özelliklerini yalnızca sıralamak yerine mekânsal deneyimi ön plana çıkarmayı amaçlayan bağımsız bir tanıtım çalışmasıdır. Mimari çizgiler, ışık ve kamera hareketi üzerinden sade, güven veren ve seçici bir sunum dili hedeflenmiştir.",
@@ -238,7 +238,7 @@ window.PORTFOLIO_PROJECTS = [
         "height": 850
       }
     ],
-    "poster": "./posters/Kozmetik-Moda.jpg",
+    "poster": "./posters/approved-2026-10-23/09_Maybelline.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Kozmetik-Moda",
     "branch": "43bc17ff4eaa19befe0a5ce2a6a650ccf0a52313",
     "overview": "Bu çalışma, Maybelline ürün iletişimini yorumlamak amacıyla hazırlanmış bağımsız ve resmî olmayan bir reklam konseptidir. Ürünü merkeze alan dinamik bir anlatımla kozmetik kategorisinin dikkat çekici, enerjik ve görsel açıdan güçlü karakterini yansıtmayı amaçlar.",
@@ -259,7 +259,7 @@ window.PORTFOLIO_PROJECTS = [
         "height": 1440
       }
     ],
-    "poster": "./posters/Otomotiv.jpg",
+    "poster": "./posters/approved-2026-10-23/10_Continental.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Otomotiv",
     "branch": "88419031701a38ec6bc5fe133675ca824231928a",
     "overview": "Continental odağındaki bu bağımsız çalışma, lastiği yalnızca teknik bir parça olarak değil, sürüş deneyiminin belirleyici unsurlarından biri olarak ele alan görsel bir reklam yorumudur. Hareket, yol yüzeyi ve ürün karakteri üzerinden güçlü bir otomotiv atmosferi kurulması hedeflenmiştir.",
@@ -301,7 +301,7 @@ window.PORTFOLIO_PROJECTS = [
         "height": 1080
       }
     ],
-    "poster": "./posters/Turizm-Seyahat-creative-1080.jpg",
+    "poster": "./posters/approved-2026-10-23/12_Turizm_Seyahat_OTEL_ONU.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Turizm-Seyahat",
     "branch": "04a82a308d975953a290dab8a6d22e1d65d28958",
     "overview": "Turizm ve Seyahat çalışması, yolcu taşımacılığını bir noktadan diğerine ulaşmanın ötesinde, yolculuk deneyimi olarak ele alan bağımsız bir tanıtım filmidir. Proje; hareket, rota ve atmosferi birleştirerek izleyicide seyahat fikrini canlandırmayı hedefler.",
