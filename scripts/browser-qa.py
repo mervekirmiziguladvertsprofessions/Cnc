@@ -25,9 +25,9 @@ async def main(args):
    await page.locator('#heroArt img').evaluate('(i)=>i.decode()')
    for image in await page.locator('#projectGrid img').all():
     await image.scroll_into_view_if_needed();await image.evaluate('(i)=>i.decode()')
-   assert await page.locator('.project').count()==11
-   assert await page.locator('.cover-bg').count()==11
-   assert await page.locator('.cover-fg').count()==11
+   assert await page.locator('.project').count()==12
+   assert await page.locator('.cover-bg').count()==12
+   assert await page.locator('.cover-fg').count()==12
    for cover in await page.locator('.cover').all():
     assert await cover.locator('img').count()==2
     assert await cover.locator('.cover-bg').evaluate('(e)=>getComputedStyle(e).filter.includes("blur")')
@@ -35,10 +35,10 @@ async def main(args):
 
    assert await page.locator('#heroArt img').get_attribute('src')=='./hero-ingiliz-anahtari.png.png'
   await home();projects=await page.evaluate('window.PORTFOLIO_PROJECTS')
-  result={'browser':browser.version,'desktop':{'width':1440,'covers':11,'hero':True},'filters':[],'mobile':[],'videos':[],'detail_layouts':0}
+  result={'browser':browser.version,'desktop':{'width':1440,'covers':12,'hero':True},'filters':[],'mobile':[],'videos':[],'detail_layouts':0}
   for cat in await page.locator('#filters button').all_text_contents():
    await page.get_by_role('button',name=cat,exact=True).click()
-   expected=11 if cat=='Tüm Projeler' else sum(p['category']==cat for p in projects)
+   expected=12 if cat=='Tüm Projeler' else sum(p['category']==cat for p in projects)
    assert await page.locator('.project').count()==expected
    assert await page.get_by_role('button',name=cat,exact=True).get_attribute('aria-pressed')=='true'
    result['filters'].append({'category':cat,'projects':expected})

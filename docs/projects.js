@@ -76,9 +76,9 @@ window.PORTFOLIO_PROJECTS = [
       },
       {
         "video": true,
-        "url": "https://raw.githubusercontent.com/mervekirmiziguladvertsprofessions/Is-Makineleri/167a6fa27444badb29b2c714da8f0ec7239e67a8/WhatsApp%20Video%202026-10-14%20at%2017.26.11.mp4",
-        "width": 478,
-        "height": 850
+        "url": "https://raw.githubusercontent.com/mervekirmiziguladvertsprofessions/Is-Makineleri/ac7514c77543106f148453b1c2023475495b23ef/31875-1.mp4",
+        "width": 1080,
+        "height": 1920
       },
       {
         "video": false,
@@ -95,7 +95,7 @@ window.PORTFOLIO_PROJECTS = [
     ],
     "poster": "./posters/Is-Makineleri.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Is-Makineleri",
-    "branch": "167a6fa27444badb29b2c714da8f0ec7239e67a8",
+    "branch": "ac7514c77543106f148453b1c2023475495b23ef",
     "overview": "Sahanın Gücü, iş makinelerinin endüstriyel kimliğini ve çalışma ortamındaki etkisini ön plana çıkaran bağımsız bir reklam konseptidir. Proje, teknik ürün iletişiminde gücü yalnızca iddia etmek yerine ölçek, hareket ve çevre ilişkisiyle hissettirmeyi amaçlar.",
     "approach": "Geniş saha kompozisyonları, makine detayları ve güçlü perspektifler üzerine kurulu bir görsel dil tercih edildi. Ağır ekipmanın karakteri, hareket ve malzeme dokusunun dengeli kullanımıyla vurgulanıyor.",
     "role": "Kreatif konsept · Yapay zekâ destekli video ve kampanya görselleri · Görsel yönlendirme",
@@ -144,6 +144,27 @@ window.PORTFOLIO_PROJECTS = [
     "overview": "Formun Ötesinde, plastik teknolojilerinin tasarım ve üretim potansiyelini merkeze alan bağımsız bir görsel kampanya konseptidir. Proje, malzemeyi yalnızca ham madde olarak değil; biçime, işleve ve ürün kimliğine dönüşen bir tasarım unsuru olarak ele alır.",
     "approach": "Yüzey, geometri ve form ilişkisi tutarlı bir görsel seriyle yorumlandı. Ürün biçimlerinin net okunması, kontrollü ışık ve sade kompozisyonlar kampanya dilini bir arada tutuyor.",
     "role": "Kreatif konsept · Kampanya görsel tasarımı · Yapay zekâ destekli video ve görsel üretimi",
+    "disclosure": "Bağımsız portföy konsepti. İlgili marka veya kurumun resmî reklamı ya da onaylı iş birliği değildir."
+  },
+  {
+    "name": "Madencilik",
+    "title": "Madencilik",
+    "description": "Madencilik sektörüne yönelik reklam filmi",
+    "category": "Sanayi & İmalat",
+    "media": [
+      {
+        "video": true,
+        "url": "https://raw.githubusercontent.com/mervekirmiziguladvertsprofessions/Madencilik/2fe48dc0d3fdfda9b9f5ad75ef3817f0bc206e73/31874_1080p_25MB_alti-1.mp4",
+        "width": 1920,
+        "height": 1080
+      }
+    ],
+    "poster": "./posters/Madencilik.jpg",
+    "github": "https://github.com/mervekirmiziguladvertsprofessions/Madencilik",
+    "branch": "2fe48dc0d3fdfda9b9f5ad75ef3817f0bc206e73",
+    "overview": "Madencilik sektörüne yönelik bağımsız reklam filmi.",
+    "approach": "Sektöre yönelik görsel anlatım ve reklam konsepti.",
+    "role": "Kreatif konsept · Görsel anlatım · Reklam filmi",
     "disclosure": "Bağımsız portföy konsepti. İlgili marka veya kurumun resmî reklamı ya da onaylı iş birliği değildir."
   },
   {
@@ -233,14 +254,14 @@ window.PORTFOLIO_PROJECTS = [
     "media": [
       {
         "video": true,
-        "url": "https://raw.githubusercontent.com/mervekirmiziguladvertsprofessions/Otomotiv/9ddafc276049b8f0dee5cd55e82a0756d89008d4/WhatsApp%20Video%202026-10-22%20at%2018.45.38%20%281%29.mp4",
-        "width": 368,
-        "height": 496
+        "url": "https://raw.githubusercontent.com/mervekirmiziguladvertsprofessions/Otomotiv/88419031701a38ec6bc5fe133675ca824231928a/31871_25MB_alti_1080p-1.mp4",
+        "width": 1080,
+        "height": 1440
       }
     ],
     "poster": "./posters/Otomotiv.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Otomotiv",
-    "branch": "9ddafc276049b8f0dee5cd55e82a0756d89008d4",
+    "branch": "88419031701a38ec6bc5fe133675ca824231928a",
     "overview": "Continental odağındaki bu bağımsız çalışma, lastiği yalnızca teknik bir parça olarak değil, sürüş deneyiminin belirleyici unsurlarından biri olarak ele alan görsel bir reklam yorumudur. Hareket, yol yüzeyi ve ürün karakteri üzerinden güçlü bir otomotiv atmosferi kurulması hedeflenmiştir.",
     "approach": "Lastik yüzeyi, zemin dokusu ve hareket ilişkisi ön planda tutuldu. Kontrollü ışık ve sinematik kadrajlar, ürün odaklı bir anlatı ile otomotiv reklamlarının dinamizmini bir araya getiriyor.",
     "role": "Bağımsız kreatif konsept · Otomotiv görsel yönlendirmesi · Yapay zekâ destekli video üretimi",
@@ -254,14 +275,14 @@ window.PORTFOLIO_PROJECTS = [
     "media": [
       {
         "video": true,
-        "url": "https://raw.githubusercontent.com/mervekirmiziguladvertsprofessions/Spor-Beslenme/aa98ce0767e2bb37b72fc9e1ab58a745c3204bf9/WhatsApp%20Video%202026-10-14%20at%2018.22.34.mp4",
-        "width": 478,
-        "height": 850
+        "url": "https://raw.githubusercontent.com/mervekirmiziguladvertsprofessions/Spor-Beslenme/8122e705ca9a1238db794db402d4a4b910629cb6/31872_1080p_25MB_alti-1.mp4",
+        "width": 1080,
+        "height": 1920
       }
     ],
     "poster": "./posters/Spor-Beslenme.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Spor-Beslenme",
-    "branch": "aa98ce0767e2bb37b72fc9e1ab58a745c3204bf9",
+    "branch": "8122e705ca9a1238db794db402d4a4b910629cb6",
     "overview": "OCN Protein için hazırlanan bu bağımsız konsept, sporcu beslenmesi kategorisini günlük rutin ve ürün deneyimi üzerinden yorumluyor. Amaç, ürünü anlaşılır bir kullanım bağlamına yerleştirirken enerjik ve akılda kalıcı bir reklam dili oluşturmaktır.",
     "approach": "Ürün odağını kaybetmeyen yakın planlar ve günlük yaşam bağlamı birlikte ele alındı. Tempo, kadraj ve renk kararları sportif dinamizmi destekleyecek şekilde kurgulandı.",
     "role": "Bağımsız kreatif konsept · Ürün odaklı görsel anlatım · Yapay zekâ destekli video üretimi",
@@ -275,14 +296,14 @@ window.PORTFOLIO_PROJECTS = [
     "media": [
       {
         "video": true,
-        "url": "https://raw.githubusercontent.com/mervekirmiziguladvertsprofessions/Turizm-Seyahat/1f26175de27ad241b5017f77357ad6b4546be70e/WhatsApp%20Video%202026-10-14%20at%2018.22.47.mp4",
-        "width": 848,
-        "height": 478
+        "url": "https://raw.githubusercontent.com/mervekirmiziguladvertsprofessions/Turizm-Seyahat/04a82a308d975953a290dab8a6d22e1d65d28958/31873_25MB_alti_1080p-2.mp4",
+        "width": 1914,
+        "height": 1080
       }
     ],
     "poster": "./posters/Turizm-Seyahat.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Turizm-Seyahat",
-    "branch": "1f26175de27ad241b5017f77357ad6b4546be70e",
+    "branch": "04a82a308d975953a290dab8a6d22e1d65d28958",
     "overview": "Turizm ve Seyahat çalışması, yolcu taşımacılığını bir noktadan diğerine ulaşmanın ötesinde, yolculuk deneyimi olarak ele alan bağımsız bir tanıtım filmidir. Proje; hareket, rota ve atmosferi birleştirerek izleyicide seyahat fikrini canlandırmayı hedefler.",
     "approach": "Akış hissini güçlendiren görüntü ritmi ve açık kompozisyonlar tercih edildi. Taşımacılık ile destinasyon deneyimi arasındaki bağ, sade ve sinematik bir görsel anlatımla kuruluyor.",
     "role": "Kreatif konsept · Seyahat odaklı görsel anlatım · Yapay zekâ destekli tanıtım filmi",
