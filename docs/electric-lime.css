@@ -100,17 +100,17 @@ nav{min-height:79px}
 #projeler #projectCount{font-size:12px;letter-spacing:.13em;color:#607462;margin:0 0 22px;text-transform:uppercase}
 #projectGrid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:42px 25px;align-items:start}
 #projectGrid .project{grid-column:span 6;border-bottom:0;padding-bottom:0;display:block;min-width:0}
-#projectGrid .project.layout-wide{grid-column:span 8}
-#projectGrid .project.layout-narrow{grid-column:span 4}
-#projectGrid .project.layout-balanced{grid-column:span 6}
-#projectGrid .project.layout-full{grid-column:span 12}
-#projectGrid .project.layout-full .cover{aspect-ratio:18/9}
+#projectGrid .project[data-layout="layout-wide"]{grid-column:span 8}
+#projectGrid .project[data-layout="layout-narrow"]{grid-column:span 4}
+#projectGrid .project[data-layout="layout-balanced"]{grid-column:span 6}
+#projectGrid .project[data-layout="layout-full"]{grid-column:span 12}
+#projectGrid .project[data-layout="layout-full"] .cover{aspect-ratio:18/9}
 #projectGrid .project .cover{
  aspect-ratio:15/10;border:0;border-radius:14px;overflow:hidden;
  background:#22362D;box-shadow:0 12px 28px #192B2116;transition:transform .45s ease,box-shadow .45s ease;
 }
-#projectGrid .project.layout-wide .cover{aspect-ratio:16/9}
-#projectGrid .project.layout-narrow .cover{aspect-ratio:4/5}
+#projectGrid .project[data-layout="layout-wide"] .cover{aspect-ratio:16/9}
+#projectGrid .project[data-layout="layout-narrow"] .cover{aspect-ratio:4/5}
 #projectGrid .project:hover .cover{transform:translateY(-7px);box-shadow:0 22px 42px #192B2133}
 #projectGrid .project .cover-bg{filter:blur(25px) brightness(.60) saturate(1.2)}
 #projectGrid .project .cover-fg{object-fit:contain;transition:transform .65s ease}
@@ -219,8 +219,8 @@ footer{background:#101913;border-color:#374B3B;color:#AABDAD}
  #projeler{padding-top:76px;padding-bottom:90px}
  #projeler .filters{margin-top:30px}
  #projectGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 16px}
- #projectGrid .project,#projectGrid .project.layout-wide,#projectGrid .project.layout-narrow,#projectGrid .project.layout-balanced,#projectGrid .project.layout-full{grid-column:span 2}
- #projectGrid .project .cover,#projectGrid .project.layout-wide .cover,#projectGrid .project.layout-narrow .cover{aspect-ratio:16/10}
+ #projectGrid .project,#projectGrid .project[data-layout="layout-wide"],#projectGrid .project[data-layout="layout-narrow"],#projectGrid .project[data-layout="layout-balanced"],#projectGrid .project[data-layout="layout-full"]{grid-column:span 2}
+ #projectGrid .project .cover,#projectGrid .project[data-layout="layout-wide"] .cover,#projectGrid .project[data-layout="layout-narrow"] .cover{aspect-ratio:16/10}
  #projectGrid .work-break{min-height:165px;padding:28px}
  #projectGrid .work-break-mark{display:none}
  #hizmetler .services{grid-template-columns:1fr}
