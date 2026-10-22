@@ -280,7 +280,7 @@ window.PORTFOLIO_PROJECTS = [
         "height": 1920
       }
     ],
-    "poster": "./posters/Spor-Beslenme.jpg",
+    "poster": "./posters/Protein-Ocean-31984.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Spor-Beslenme",
     "branch": "8122e705ca9a1238db794db402d4a4b910629cb6",
     "overview": "OCN Protein için hazırlanan bu bağımsız konsept, sporcu beslenmesi kategorisini günlük rutin ve ürün deneyimi üzerinden yorumluyor. Amaç, ürünü anlaşılır bir kullanım bağlamına yerleştirirken enerjik ve akılda kalıcı bir reklam dili oluşturmaktır.",
