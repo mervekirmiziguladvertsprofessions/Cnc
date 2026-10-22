@@ -233,14 +233,14 @@ window.PORTFOLIO_PROJECTS = [
     "media": [
       {
         "video": true,
-        "url": "https://raw.githubusercontent.com/mervekirmiziguladvertsprofessions/Otomotiv/782093cddbdb117f31b6325f9d8b41c3341e98fa/WhatsApp%20Video%202026-10-14%20at%2018.22.36.mp4",
+        "url": "https://raw.githubusercontent.com/mervekirmiziguladvertsprofessions/Otomotiv/9ddafc276049b8f0dee5cd55e82a0756d89008d4/WhatsApp%20Video%202026-10-22%20at%2018.45.38%20%281%29.mp4",
         "width": 368,
         "height": 496
       }
     ],
     "poster": "./posters/Otomotiv.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Otomotiv",
-    "branch": "782093cddbdb117f31b6325f9d8b41c3341e98fa",
+    "branch": "9ddafc276049b8f0dee5cd55e82a0756d89008d4",
     "overview": "Continental odağındaki bu bağımsız çalışma, lastiği yalnızca teknik bir parça olarak değil, sürüş deneyiminin belirleyici unsurlarından biri olarak ele alan görsel bir reklam yorumudur. Hareket, yol yüzeyi ve ürün karakteri üzerinden güçlü bir otomotiv atmosferi kurulması hedeflenmiştir.",
     "approach": "Lastik yüzeyi, zemin dokusu ve hareket ilişkisi ön planda tutuldu. Kontrollü ışık ve sinematik kadrajlar, ürün odaklı bir anlatı ile otomotiv reklamlarının dinamizmini bir araya getiriyor.",
     "role": "Bağımsız kreatif konsept · Otomotiv görsel yönlendirmesi · Yapay zekâ destekli video üretimi",
