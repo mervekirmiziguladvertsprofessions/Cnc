@@ -103,6 +103,8 @@ nav{min-height:79px}
 #projectGrid .project.layout-wide{grid-column:span 8}
 #projectGrid .project.layout-narrow{grid-column:span 4}
 #projectGrid .project.layout-balanced{grid-column:span 6}
+#projectGrid .project.layout-full{grid-column:span 12}
+#projectGrid .project.layout-full .cover{aspect-ratio:18/9}
 #projectGrid .project .cover{
  aspect-ratio:15/10;border:0;border-radius:14px;overflow:hidden;
  background:#22362D;box-shadow:0 12px 28px #192B2116;transition:transform .45s ease,box-shadow .45s ease;
@@ -217,7 +219,7 @@ footer{background:#101913;border-color:#374B3B;color:#AABDAD}
  #projeler{padding-top:76px;padding-bottom:90px}
  #projeler .filters{margin-top:30px}
  #projectGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 16px}
- #projectGrid .project,#projectGrid .project.layout-wide,#projectGrid .project.layout-narrow,#projectGrid .project.layout-balanced{grid-column:span 2}
+ #projectGrid .project,#projectGrid .project.layout-wide,#projectGrid .project.layout-narrow,#projectGrid .project.layout-balanced,#projectGrid .project.layout-full{grid-column:span 2}
  #projectGrid .project .cover,#projectGrid .project.layout-wide .cover,#projectGrid .project.layout-narrow .cover{aspect-ratio:16/10}
  #projectGrid .work-break{min-height:165px;padding:28px}
  #projectGrid .work-break-mark{display:none}
