@@ -30,7 +30,7 @@ function renderGrid(){
   const coverUrl=escapeHTML(p.poster);
   const layout=isAll?(allLayouts[i]||"layout-balanced"):(shown.length===1?"layout-full":filteredLayouts[i%filteredLayouts.length]);
   const index=String(i+1).padStart(2,"0");
-  const card='<a class="project '+layout+'" href="?proje='+encodeURIComponent(p.name)+'">'+
+  const card='<a class="project" data-layout="'+layout+'" href="?proje='+encodeURIComponent(p.name)+'">'+
    '<div class="cover">'+
    '<img class="cover-bg" src="'+coverUrl+'" loading="lazy" alt="" aria-hidden="true">'+
    '<img class="cover-fg" src="'+coverUrl+'" loading="lazy" alt="'+escapeHTML(p.title)+' kapak görseli">'+
