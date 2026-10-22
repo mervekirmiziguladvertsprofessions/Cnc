@@ -24,7 +24,7 @@ function renderGrid(){
  const shown=projects.filter(p=>active==="Tüm Projeler"||p.category===active);
  el("projectCount").textContent=shown.length+" proje / seçilmiş çalışmalar";
  const isAll=active==="Tüm Projeler";
- const allLayouts=["layout-wide","layout-narrow","layout-narrow","layout-wide","layout-balanced","layout-balanced","layout-wide","layout-narrow","layout-narrow","layout-wide","layout-full"];
+ const allLayouts=["layout-wide","layout-narrow","layout-narrow","layout-wide","layout-balanced","layout-balanced","layout-wide","layout-narrow","layout-narrow","layout-wide","layout-balanced","layout-balanced"];
  const filteredLayouts=["layout-wide","layout-narrow","layout-balanced","layout-balanced"];
  const cards=shown.map((p,i)=>{
   const coverUrl=escapeHTML(p.poster);
