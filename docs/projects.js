@@ -93,7 +93,7 @@ window.PORTFOLIO_PROJECTS = [
         "url": "https://raw.githubusercontent.com/mervekirmiziguladvertsprofessions/Is-Makineleri/167a6fa27444badb29b2c714da8f0ec7239e67a8/%C4%B0%C5%9F%20Makinesi%20%20deniz.png"
       }
     ],
-    "poster": "./posters/Is-Makineleri.jpg",
+    "poster": "./posters/Is-Makineleri-creative-1080.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Is-Makineleri",
     "branch": "ac7514c77543106f148453b1c2023475495b23ef",
     "overview": "Sahanın Gücü, iş makinelerinin endüstriyel kimliğini ve çalışma ortamındaki etkisini ön plana çıkaran bağımsız bir reklam konseptidir. Proje, teknik ürün iletişiminde gücü yalnızca iddia etmek yerine ölçek, hareket ve çevre ilişkisiyle hissettirmeyi amaçlar.",
@@ -148,7 +148,7 @@ window.PORTFOLIO_PROJECTS = [
   },
   {
     "name": "Madencilik",
-    "title": "Madencilik",
+    "title": "Yeraltından Cevhere",
     "description": "Madencilik sektörüne yönelik reklam filmi",
     "category": "Sanayi & İmalat",
     "media": [
@@ -159,7 +159,7 @@ window.PORTFOLIO_PROJECTS = [
         "height": 1080
       }
     ],
-    "poster": "./posters/Madencilik.jpg",
+    "poster": "./posters/Yeraltindan-Cevhere-creative-1080.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Madencilik",
     "branch": "2fe48dc0d3fdfda9b9f5ad75ef3817f0bc206e73",
     "overview": "Madencilik sektörüne yönelik bağımsız reklam filmi.",
@@ -301,7 +301,7 @@ window.PORTFOLIO_PROJECTS = [
         "height": 1080
       }
     ],
-    "poster": "./posters/Turizm-Seyahat.jpg",
+    "poster": "./posters/Turizm-Seyahat-creative-1080.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Turizm-Seyahat",
     "branch": "04a82a308d975953a290dab8a6d22e1d65d28958",
     "overview": "Turizm ve Seyahat çalışması, yolcu taşımacılığını bir noktadan diğerine ulaşmanın ötesinde, yolculuk deneyimi olarak ele alan bağımsız bir tanıtım filmidir. Proje; hareket, rota ve atmosferi birleştirerek izleyicide seyahat fikrini canlandırmayı hedefler.",
