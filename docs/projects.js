@@ -227,6 +227,12 @@ window.PORTFOLIO_PROJECTS = [
         "url": "https://raw.githubusercontent.com/mervekirmiziguladvertsprofessions/Gayrimenkul/0090278f6b02ae4e184599f0558554a3de19767b/32328_25MB_alti-1.mp4",
         "width": 1920,
         "height": 1080
+      },
+      {
+        "video": true,
+        "url": "https://raw.githubusercontent.com/mervekirmiziguladvertsprofessions/Gayrimenkul/d259f372adfdcd748bc8d6c4f1b49f2b7916a737/WhatsApp%20Video%202026-10-28%20at%2009.52.27.mp4",
+        "width": 854,
+        "height": 480
       }
     ],
     "poster": "./posters/approved-2026-10-23/08_Gayrimenkul.jpg",
