@@ -235,7 +235,8 @@ window.PORTFOLIO_PROJECTS = [
         "video": true,
         "url": "https://raw.githubusercontent.com/mervekirmiziguladvertsprofessions/Gayrimenkul/3471743953468a7d02a342095b6cd591d9d76a88/34084_25MB_alti-2.mp4",
         "width": 1920,
-        "height": 1080
+        "height": 1080,
+        "poster": "./posters/gayrimenkul/emlak-34084.png"
       }
     ],
     "poster": "./posters/gayrimenkul/vista-dis-cephe.png",
