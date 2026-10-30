@@ -212,13 +212,6 @@ window.PORTFOLIO_PROJECTS = [
     "media": [
       {
         "video": true,
-        "url": "https://raw.githubusercontent.com/mervekirmiziguladvertsprofessions/Gayrimenkul/206e92c1e92a4409ff662d4e17ca408eeccd96c4/WhatsApp%20Video%202026-10-14%20at%2018.36.06.mp4",
-        "width": 848,
-        "height": 478,
-        "poster": "./posters/gayrimenkul/vista-dis-cephe.png"
-      },
-      {
-        "video": true,
         "url": "https://raw.githubusercontent.com/mervekirmiziguladvertsprofessions/Gayrimenkul/0090278f6b02ae4e184599f0558554a3de19767b/32323_25MB_alti-8.mp4",
         "width": 1920,
         "height": 1080,
