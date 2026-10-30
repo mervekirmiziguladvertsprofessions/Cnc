@@ -52,7 +52,7 @@ function detailPage(p){
  const field=(label,value)=>'<div><div class="small">'+escapeHTML(label)+'</div><p>'+escapeHTML(value)+'</p></div>';
  const details='<div class="case-panel">'+field("PROJE HAKKINDA",p.overview||p.description)+field("YARATICI YAKLAŞIM",p.approach||"Yapay zekâ destekli görsel anlatım.")+field("ÇALIŞMA KAPSAMI",p.role||"Kreatif konsept ve görsel üretim")+'</div>';
  const note=p.disclosure?'<p class="case-disclosure">'+escapeHTML(p.disclosure)+'</p>':'';
- el("detailBody").innerHTML='<div class="small">'+escapeHTML(p.category)+'</div><h1>'+escapeHTML(p.title)+'</h1><p class="muted">'+escapeHTML(p.description)+'</p>'+details+'<h2>Film ve görseller</h2><div class="detail-media">'+p.media.map(m=>mediaTag(m,false,p.poster)).join("")+'</div>'+note+'<p><a class="btn" target="_blank" rel="noopener noreferrer" href="'+escapeHTML(p.github)+'">GitHub proje dosyaları ↗</a></p>';
+ el("detailBody").innerHTML='<div class="small">'+escapeHTML(p.category)+'</div><h1>'+escapeHTML(p.title)+'</h1><p class="muted">'+escapeHTML(p.description)+'</p>'+details+'<h2>Film ve görseller</h2><div class="detail-media">'+p.media.map(m=>mediaTag(m,false,m.poster||p.poster)).join("")+'</div>'+note+'<p><a class="btn" target="_blank" rel="noopener noreferrer" href="'+escapeHTML(p.github)+'">GitHub proje dosyaları ↗</a></p>';
  el("detailBody").querySelectorAll("video").forEach(v=>v.addEventListener("error",()=>{
   const message=document.createElement("p");message.className="muted";message.textContent="Video yüklenemedi. GitHub proje dosyaları bağlantısından filme ulaşabilirsiniz.";v.after(message);
  },{once:true}));

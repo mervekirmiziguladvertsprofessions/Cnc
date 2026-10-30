@@ -6,6 +6,7 @@ function run(search=''){
  const nodes={};const context={window:{},URLSearchParams,location:{search},document:{title:'',getElementById(id){return nodes[id]??={innerHTML:'',textContent:'',hidden:false,querySelectorAll(){return []}}}}};
  vm.createContext(context);vm.runInContext(data,context);vm.runInContext(app,context);return {context,nodes};
 }
+function detailPoster(p,m){return run('?proje='+encodeURIComponent(p.name)).nodes.detailBody.innerHTML.includes('poster="'+m.poster+'"')}
 const {context,nodes}=run();const projects=context.window.PORTFOLIO_PROJECTS;
 assert.equal(projects.length,12);assert.equal(new Set(projects.map(p=>p.name)).size,12);
 assert.equal((nodes.projectGrid.innerHTML.match(/class="project"/g)||[]).length,12);
@@ -14,7 +15,7 @@ assert.equal((nodes.projectGrid.innerHTML.match(/class="cover-fg"/g)||[]).length
 for(const p of projects){
  assert(fs.existsSync(path.join(root,'docs',p.poster)));
  assert(p.media.some(m=>m.video));assert(p.overview&&p.approach&&p.role&&p.disclosure);
- for(const m of p.media){assert.match(m.url,/raw\.githubusercontent\.com\/[^/]+\/[^/]+\/[a-f0-9]{40}\//);if(m.video){assert(m.width>0&&m.height>0)}}
+ for(const m of p.media){if(m.poster){assert(fs.existsSync(path.join(root,'docs',m.poster)));assert(detailPoster(p,m));}assert.match(m.url,/raw\.githubusercontent\.com\/[^/]+\/[^/]+\/[a-f0-9]{40}\//);if(m.video){assert(m.width>0&&m.height>0)}}
  const detail=run('?proje='+encodeURIComponent(p.name));assert.equal(detail.nodes.homepage.hidden,true);assert(detail.nodes.detailBody.innerHTML.includes(p.title));assert(detail.context.document.title.startsWith(p.title));
 }
 vm.runInContext('active="Sanayi & İmalat";renderGrid()',context);assert.equal((nodes.projectGrid.innerHTML.match(/class="project"/g)||[]).length,5);

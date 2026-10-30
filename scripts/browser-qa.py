@@ -60,7 +60,7 @@ async def main(args):
      await image.scroll_into_view_if_needed();await image.evaluate('(i)=>i.decode()')
     assert await page.evaluate('document.documentElement.scrollWidth<=innerWidth')
     for idx,v in enumerate(await page.locator('#detail video').all()):
-     assert await v.get_attribute('poster')==p['poster']
+     assert await v.get_attribute('poster')==([m for m in p['media'] if m['video']][idx].get('poster') or p['poster'])
      assert await v.evaluate('(v)=>v.controls&&v.playsInline&&getComputedStyle(v).objectFit==="contain"')
      if width in [1440,390]:
       state=await asyncio.wait_for(v.evaluate('''async v=>{

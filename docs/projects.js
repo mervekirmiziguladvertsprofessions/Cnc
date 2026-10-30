@@ -214,28 +214,32 @@ window.PORTFOLIO_PROJECTS = [
         "video": true,
         "url": "https://raw.githubusercontent.com/mervekirmiziguladvertsprofessions/Gayrimenkul/206e92c1e92a4409ff662d4e17ca408eeccd96c4/WhatsApp%20Video%202026-10-14%20at%2018.36.06.mp4",
         "width": 848,
-        "height": 478
+        "height": 478,
+        "poster": "./posters/gayrimenkul/vista-dis-cephe.png"
       },
       {
         "video": true,
         "url": "https://raw.githubusercontent.com/mervekirmiziguladvertsprofessions/Gayrimenkul/0090278f6b02ae4e184599f0558554a3de19767b/32323_25MB_alti-8.mp4",
         "width": 1920,
-        "height": 1080
+        "height": 1080,
+        "poster": "./posters/gayrimenkul/vista-dis-cephe.png"
       },
       {
         "video": true,
         "url": "https://raw.githubusercontent.com/mervekirmiziguladvertsprofessions/Gayrimenkul/0090278f6b02ae4e184599f0558554a3de19767b/32328_25MB_alti-1.mp4",
         "width": 1920,
-        "height": 1080
+        "height": 1080,
+        "poster": "./posters/gayrimenkul/amber-daire.png"
       },
       {
         "video": true,
         "url": "https://raw.githubusercontent.com/mervekirmiziguladvertsprofessions/Gayrimenkul/d259f372adfdcd748bc8d6c4f1b49f2b7916a737/WhatsApp%20Video%202026-10-28%20at%2009.52.27.mp4",
         "width": 854,
-        "height": 480
+        "height": 480,
+        "poster": "./posters/gayrimenkul/kiralik-ofis.png"
       }
     ],
-    "poster": "./posters/approved-2026-10-23/08_Gayrimenkul.jpg",
+    "poster": "./posters/gayrimenkul/vista-dis-cephe.png",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Gayrimenkul",
     "branch": "206e92c1e92a4409ff662d4e17ca408eeccd96c4",
     "overview": "Gayrimenkul konsepti, bir yaşam alanının özelliklerini yalnızca sıralamak yerine mekânsal deneyimi ön plana çıkarmayı amaçlayan bağımsız bir tanıtım çalışmasıdır. Mimari çizgiler, ışık ve kamera hareketi üzerinden sade, güven veren ve seçici bir sunum dili hedeflenmiştir.",
