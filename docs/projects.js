@@ -317,14 +317,14 @@ window.PORTFOLIO_PROJECTS = [
     "media": [
       {
         "video": true,
-        "url": "https://raw.githubusercontent.com/mervekirmiziguladvertsprofessions/Turizm-Seyahat/04a82a308d975953a290dab8a6d22e1d65d28958/31873_25MB_alti_1080p-2.mp4",
+        "url": "https://raw.githubusercontent.com/mervekirmiziguladvertsprofessions/Turizm-Seyahat/8cc8249c2bbea03c017e7fae9ea429be27817d75/34089_25MB_alti_final-3.mp4",
         "width": 1914,
         "height": 1080
       }
     ],
     "poster": "./posters/approved-2026-10-23/12_Turizm_Seyahat_OTEL_ONU.jpg",
     "github": "https://github.com/mervekirmiziguladvertsprofessions/Turizm-Seyahat",
-    "branch": "04a82a308d975953a290dab8a6d22e1d65d28958",
+    "branch": "8cc8249c2bbea03c017e7fae9ea429be27817d75",
     "overview": "Turizm ve Seyahat çalışması, yolcu taşımacılığını bir noktadan diğerine ulaşmanın ötesinde, yolculuk deneyimi olarak ele alan bağımsız bir tanıtım filmidir. Proje; hareket, rota ve atmosferi birleştirerek izleyicide seyahat fikrini canlandırmayı hedefler.",
     "approach": "Akış hissini güçlendiren görüntü ritmi ve açık kompozisyonlar tercih edildi. Taşımacılık ile destinasyon deneyimi arasındaki bağ, sade ve sinematik bir görsel anlatımla kuruluyor.",
     "role": "Kreatif konsept · Seyahat odaklı görsel anlatım · Yapay zekâ destekli tanıtım filmi",
