@@ -6,7 +6,7 @@ const el=id=>document.getElementById(id);
 const escapeHTML=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 function mediaTag(m,preview=false,poster=""){
  const url=escapeHTML(m.url);
- if(m.video)return '<video src="'+url+'" poster="'+escapeHTML(poster)+'" controls playsinline preload="none" width="'+m.width+'" height="'+m.height+'" aria-label="Proje filmi"></video>';
+ if(m.video)return '<video src="'+url+'" poster="'+escapeHTML(poster)+'" controls controlsList="nodownload" disablePictureInPicture oncontextmenu="return false" playsinline preload="none" width="'+m.width+'" height="'+m.height+'" aria-label="Proje filmi"></video>';
  return '<img src="'+url+'" loading="lazy" alt="Proje görseli">';
 }
 function renderFilters(){
