@@ -245,3 +245,11 @@ footer{background:#101913;border-color:#374B3B;color:#AABDAD}
  .ticker-track{animation:none}
  .hero-art,#projectGrid .project .cover,#projectGrid .project .cover-fg,#hizmetler .service{transition:none}
 }
+
+/* Portfolio preview player: no browser-native download menu */
+.protected-player{position:relative;width:100%;background:#050605;border-radius:12px;overflow:hidden;user-select:none;-webkit-user-select:none}
+.protected-player video{display:block;width:100%;height:auto;max-height:80vh;object-fit:contain}
+.protected-controls{display:flex;align-items:center;gap:9px;padding:10px 12px;background:#101510;color:#f4f5ef}
+.protected-controls button{background:transparent;border:0;color:inherit;cursor:pointer;font-size:19px;min-width:29px;min-height:35px}
+.protected-controls .pp-time{font-size:12px;font-variant-numeric:tabular-nums}
+.protected-controls .pp-seek{flex:1;min-width:35px;accent-color:#c8e96b}
