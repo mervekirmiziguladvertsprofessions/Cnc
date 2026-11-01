@@ -6,7 +6,7 @@ const el=id=>document.getElementById(id);
 const escapeHTML=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 function mediaTag(m,preview=false,poster=""){
  const url=escapeHTML(m.url);
- if(m.video)return '<div class="protected-player" oncontextmenu="return false"><video src="'+url+'" poster="'+escapeHTML(poster)+'" playsinline preload="metadata" disablePictureInPicture controlsList="nodownload" width="'+m.width+'" height="'+m.height+'" aria-label="Proje filmi"></video><div class="protected-controls"><button type="button" class="pp-play" aria-label="Oynat veya duraklat">▶</button><span class="pp-time">0:00</span><input class="pp-seek" type="range" min="0" max="1000" value="0" aria-label="Video konumu"><button type="button" class="pp-mute" aria-label="Sesi aç veya kapat">♫</button><button type="button" class="pp-full" aria-label="Tam ekran">⛶</button></div></div>';
+ if(m.video)return '<div class="protected-player" oncontextmenu="return false"><video src="'+url+'" poster="'+escapeHTML(poster)+'" playsinline preload="metadata" disablePictureInPicture controlsList="nodownload" width="'+m.width+'" height="'+m.height+'" aria-label="Proje filmi"></video><div class="protected-controls"><button type="button" class="pp-play" aria-label="Oynat veya duraklat">▶</button><span class="pp-time">0:00</span><input class="pp-seek" type="range" min="0" max="1000" value="0" aria-label="Video konumu"><button type="button" class="pp-mute" aria-label="Sesi aç veya kapat">♫</button><button type="button" class="pp-full" aria-label="Tam ekran">⛶</button></div><p class="portfolio-note">Portföy çalışmasıdır.</p></div>';
  return '<img src="'+url+'" loading="lazy" alt="Proje görseli">';
 }
 function renderFilters(){

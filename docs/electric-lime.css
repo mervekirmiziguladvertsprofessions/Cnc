@@ -253,3 +253,6 @@ footer{background:#101913;border-color:#374B3B;color:#AABDAD}
 .protected-controls button{background:transparent;border:0;color:inherit;cursor:pointer;font-size:19px;min-width:29px;min-height:35px}
 .protected-controls .pp-time{font-size:12px;font-variant-numeric:tabular-nums}
 .protected-controls .pp-seek{flex:1;min-width:35px;accent-color:#c8e96b}
+
+/* Caption beneath each video work */
+.protected-player .portfolio-note{margin:0;padding:8px 12px 14px;background:#101510;color:#AAB6B2;font-size:13px;line-height:1.5}
